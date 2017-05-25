@@ -1,0 +1,14 @@
+package org.cisco.cmad.BloggingApp.api;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class UserCredentials {
+	
+	@Id
+	private String userid;
+	private String password;
+	
+
+}

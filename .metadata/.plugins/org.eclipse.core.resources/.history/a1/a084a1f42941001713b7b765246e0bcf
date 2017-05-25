@@ -1,0 +1,10 @@
+package org.cisco.cmad.BloggingApp.api;
+
+public interface BlogPostInf {
+	
+	public void createBlogpost();
+    public BlogPostInf deleteBlogpost(String blogpostid);
+    public BlogPostInf retrieveBlogpost(String blogpostid);
+    
+	
+}
