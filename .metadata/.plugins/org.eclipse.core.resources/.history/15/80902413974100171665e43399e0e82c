@@ -1,0 +1,65 @@
+package org.cisco.cmad.BloggingApp.Database;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
+import org.cisco.cmad.BloggingApp.api.BlogPost;
+import org.cisco.cmad.BloggingApp.api.Comments;
+import org.cisco.cmad.BloggingApp.api.UserDetails;
+
+public class JPABlogPostDAO implements BlogPostInf {
+
+	private static EntityManagerFactory factory = Persistence.createEntityManagerFactory("Blogging-App");
+	@Override
+	public void createBlogpost(BlogPost blogpost,UserDetails userdetails) {
+		
+		BlogPost blogpost1 = new BlogPost();
+		blogpost1.setBlogpostid("#BLOG1");
+		blogpost1.setTitle("MATHS");
+		blogpost1.setBlogContent("Topic about Algebra");
+		blogpost1.setUser(userdetails);
+		
+		Comments comment1= new Comments();
+		comment1.setComment("#comment1");
+		
+	    blogpost1.getCommentslist().add(comment1);
+	    userdetails.getBloglist().put(blogpost1.getBlogpostid(), blogpost1);
+	    blogpost1.setUser(userdetails);
+	    comment1.setBlogpost(blogpost1);
+	    
+		EntityManager em = factory.createEntityManager();
+		EntityTransaction tx = em.getTransaction();
+		tx.begin();
+		
+		em.persist(userdetails);
+		em.persist(blogpost1);
+		em.persist(comment1);
+		
+		tx.commit();
+		em.close();
+
+	}
+
+	@Override
+	public BlogPost deleteBlogpost(String blogpostid) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public BlogPost retrieveBlogpost(String blogpostid) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<BlogPost> listallBlogPosts() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

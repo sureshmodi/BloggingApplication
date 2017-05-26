@@ -1,0 +1,5 @@
+package org.cisco.cmad.BloggingApp.RestResources;
+
+public class Errormsg {
+
+}

@@ -1,0 +1,10 @@
+package org.cisco.cmad.BloggingApp.RestResources;
+
+import javax.ws.rs.Path;
+
+@Path("/Blogging/user/")
+public class RestUserDetails {
+	
+	
+
+}

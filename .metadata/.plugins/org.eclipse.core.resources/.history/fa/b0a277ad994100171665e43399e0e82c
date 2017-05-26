@@ -1,0 +1,12 @@
+package org.cisco.cmad.BloggingApp.Database;
+
+import org.cisco.cmad.BloggingApp.api.UserDetails;
+
+public interface UserDAOInf {
+	
+		public void createUser();
+		public UserDetails updateProfile();
+		public UserDetails retreiveUser();
+	
+
+}

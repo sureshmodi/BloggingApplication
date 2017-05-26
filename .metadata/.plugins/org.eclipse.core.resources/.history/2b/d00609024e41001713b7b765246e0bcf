@@ -1,0 +1,18 @@
+package org.cisco.cmad.BloggingApp.api;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
+@Entity
+public class Comments {
+	
+	@Id
+	private String commentid;
+	private String comment;
+		
+	@ManyToOne
+	@
+	private BlogPost blogPost;
+
+}

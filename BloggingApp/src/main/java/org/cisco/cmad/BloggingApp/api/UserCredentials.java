@@ -5,7 +5,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
-@Entity
+// @Entity
 public class UserCredentials {
 	
 	@Id

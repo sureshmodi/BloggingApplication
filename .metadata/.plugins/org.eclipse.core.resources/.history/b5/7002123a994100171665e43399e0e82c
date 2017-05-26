@@ -1,0 +1,25 @@
+package org.cisco.cmad.BloggingApp.Database;
+
+import org.cisco.cmad.BloggingApp.api.UserDetails;
+
+public class JPAUserDAO implements UserDAOInf {
+
+	@Override
+	public void createUser() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public UserDetails updateProfile() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public UserDetails retreiveUser() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

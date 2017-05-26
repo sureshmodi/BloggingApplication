@@ -49,8 +49,36 @@
             <groupId>org.glassfish.jersey.media</groupId>
             <artifactId>jersey-media-moxy</artifactId>
         </dependency>
-      
+        
+        <dependency>
+      			<groupId>junit</groupId>
+      			<artifactId>junit</artifactId>
+      			<version>3.8.1</version>
+      			<scope>test</scope>
+    	</dependency>
+    
+    	<dependency>
+   			 <groupId>org.hibernate</groupId>
+   			 <artifactId>hibernate-core</artifactId>
+   			 <version>5.2.10.Final</version>
+		</dependency>
+
+	<!-- for JPA, use hibernate-entitymanager instead of hibernate-core -->
+		<dependency>
+   				<groupId>org.hibernate</groupId>
+    			<artifactId>hibernate-entitymanager</artifactId>
+    			<version>5.2.10.Final</version>
+   		</dependency>
+		
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.42</version>
+		</dependency>
+       
     </dependencies>
+      
+   
     <properties>
         <jersey.version>2.26-b03</jersey.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

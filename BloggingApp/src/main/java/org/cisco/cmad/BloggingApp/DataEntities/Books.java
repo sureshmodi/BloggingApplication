@@ -8,8 +8,8 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-@Entity
-@Table(name="BOOKS")
+//@Entity
+//@Table(name="BOOKS")
 
 public class Books {
 	
