@@ -5,16 +5,24 @@ import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.MapKeyColumn;
 import javax.persistence.OneToMany;
+import javax.persistence.Transient;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 
 @Entity
-@XmlRootElement
+//@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class BlogPost {
 	
 	@Id
@@ -22,29 +30,32 @@ public class BlogPost {
 	private String title;
 	private String blogContent;
 	
-	@ManyToOne
-	@JoinColumn(name="USER_ID")
 	
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="USER_ID")
+	@XmlTransient
 	private UserDetails user;
 	
-	private Date datecreated;
+	private Date datecreated=new Date();
 	
-	@OneToMany(mappedBy="blogpost")
+	
+	@OneToMany(fetch=FetchType.LAZY)
+	
 	private List<Comments> commentslist = new ArrayList<>();
 	
-	public BlogPost() {
-		
-		this.datecreated=new Date();
-		
-	}
-
-	public BlogPost(String blogpostid, String title, String blogContent) {
-		
-		this.blogpostid = blogpostid;
-		this.title = title;
-		this.blogContent = blogContent;
-		this.datecreated = new Date();
-	}
+//	public BlogPost() {
+//		
+//		// this.datecreated=new Date();
+//		
+//	}
+//
+//	public BlogPost(String blogpostid, String title, String blogContent) {
+//		
+//		this.blogpostid = blogpostid;
+//		this.title = title;
+//		this.blogContent = blogContent;
+//		this.datecreated = new Date();
+//	}
 
 	public String getBlogpostid() {
 		return blogpostid;

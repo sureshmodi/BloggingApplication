@@ -1,0 +1,13 @@
+package org.cisco.cmad.BloggingApp.RestResources;
+
+import javax.transaction.SystemException;
+
+import org.hibernate.engine.spi.SessionImplementor;
+import org.hibernate.resource.transaction.backend.jta.internal.synchronization.ExceptionMapper;
+
+public class BlogExceptionMapper implements ExceptionMapper<Throwable>{
+
+	
+	
+
+}

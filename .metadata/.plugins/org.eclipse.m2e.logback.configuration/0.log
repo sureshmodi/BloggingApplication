@@ -1381,3 +1381,787 @@
 2017-05-26 08:45:20,101 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
 2017-05-26 08:45:20,102 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2017-05-26 08:45:20,102 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-26 21:38:14,663 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-26 21:38:14,673 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-26 21:38:14,681 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-26 21:38:14,681 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-26 21:39:41,304 [Start Help Server] INFO  org.eclipse.jetty.util.log - Logging initialized @113959ms
+2017-05-26 21:39:41,459 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-9.3.9.v20160517
+2017-05-26 21:39:41,501 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@6ce0ba2d{/help,null,AVAILABLE}
+2017-05-26 21:39:41,516 [Start Help Server] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@169aeffd{HTTP/1.1,[http/1.1]}{127.0.0.1:51867}
+2017-05-26 21:39:41,516 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started @114172ms
+2017-05-26 21:43:17,453 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-26 21:43:17,463 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-26 21:43:17,465 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-26 21:43:17,465 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-26 21:48:36,959 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-26 21:48:36,960 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-26 21:48:36,961 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-26 21:48:36,961 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-26 21:54:34,949 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-26 21:54:34,950 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-26 21:54:34,951 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-26 21:54:34,951 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-26 21:56:52,765 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-26 21:56:52,765 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-26 21:56:52,766 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-26 21:56:52,766 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-26 22:02:07,438 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-26 22:02:07,439 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-26 22:02:07,440 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-26 22:02:07,440 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-26 22:04:41,346 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-26 22:04:41,347 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-26 22:04:41,348 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-26 22:04:41,348 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-26 22:07:19,335 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-26 22:07:19,335 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-26 22:07:19,337 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-26 22:07:19,338 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-26 22:19:12,590 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-26 22:19:12,591 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-26 22:19:12,592 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-26 22:19:12,592 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-26 22:27:01,243 [Worker-65] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-26 22:27:01,244 [Worker-65] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-26 22:27:01,245 [Worker-65] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-26 22:27:01,245 [Worker-65] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-26 22:30:01,376 [Worker-65] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-26 22:30:01,378 [Worker-65] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-26 22:30:01,379 [Worker-65] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-26 22:30:01,379 [Worker-65] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-26 22:31:08,067 [Worker-65] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-26 22:31:08,068 [Worker-65] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-26 22:31:08,068 [Worker-65] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-26 22:31:08,096 [Worker-65] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-26 22:32:28,930 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-26 22:32:28,930 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-26 22:32:28,931 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-26 22:32:28,932 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-26 22:42:43,476 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-26 22:42:43,477 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-26 22:42:43,478 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-26 22:42:43,478 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-27 11:09:00,565 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 11:09:00,567 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-27 11:09:00,569 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 11:09:00,570 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-27 11:09:51,761 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 11:09:51,762 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-27 11:09:51,765 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 11:09:51,765 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-27 11:16:38,648 [Worker-113] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 11:16:38,649 [Worker-113] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-27 11:16:38,650 [Worker-113] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 11:16:38,650 [Worker-113] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-27 11:18:02,202 [Worker-114] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 11:18:02,203 [Worker-114] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-27 11:18:02,204 [Worker-114] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 11:18:02,204 [Worker-114] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-27 11:18:46,977 [Worker-117] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 11:18:46,979 [Worker-117] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-27 11:18:46,980 [Worker-117] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 11:18:46,980 [Worker-117] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-27 11:19:17,503 [Worker-118] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 11:19:17,503 [Worker-118] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-27 11:19:17,504 [Worker-118] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 11:19:17,504 [Worker-118] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-27 11:28:22,335 [Worker-120] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 11:28:22,336 [Worker-120] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-27 11:28:22,337 [Worker-120] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 11:28:22,337 [Worker-120] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-27 11:30:12,589 [Worker-116] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 11:30:12,590 [Worker-116] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-27 11:30:12,591 [Worker-116] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 11:30:12,591 [Worker-116] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-27 11:30:39,348 [Worker-116] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 11:30:39,349 [Worker-116] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-27 11:30:39,350 [Worker-116] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 11:30:39,350 [Worker-116] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-27 11:31:06,124 [Worker-120] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 11:31:06,125 [Worker-120] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-27 11:31:06,125 [Worker-120] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 11:31:06,126 [Worker-120] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-27 11:31:18,418 [Worker-123] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 11:31:18,419 [Worker-123] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-27 11:31:18,421 [Worker-123] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 11:31:18,421 [Worker-123] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-27 11:31:59,870 [Worker-124] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 11:31:59,871 [Worker-124] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-27 11:31:59,872 [Worker-124] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 11:31:59,872 [Worker-124] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-27 11:33:10,482 [Worker-123] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 11:33:10,483 [Worker-123] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-27 11:33:10,484 [Worker-123] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 11:33:10,484 [Worker-123] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-27 11:33:27,513 [Worker-116] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 11:33:27,515 [Worker-116] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-27 11:33:27,516 [Worker-116] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 11:33:27,516 [Worker-116] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-27 11:35:24,124 [Worker-124] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 11:35:24,125 [Worker-124] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-27 11:35:24,126 [Worker-124] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 11:35:24,126 [Worker-124] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-27 11:39:56,183 [Worker-116] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 11:39:56,183 [Worker-116] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-27 11:39:56,184 [Worker-116] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 11:39:56,184 [Worker-116] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-27 11:40:27,502 [Worker-127] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 11:40:27,503 [Worker-127] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-27 11:40:27,504 [Worker-127] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 11:40:27,504 [Worker-127] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-27 11:46:12,615 [Worker-130] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 11:46:12,617 [Worker-130] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-27 11:46:12,618 [Worker-130] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 11:46:12,618 [Worker-130] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-27 11:46:24,682 [Worker-130] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 11:46:24,683 [Worker-130] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-27 11:46:24,684 [Worker-130] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 11:46:24,684 [Worker-130] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-27 11:48:06,329 [Worker-132] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 11:48:06,329 [Worker-132] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-27 11:48:06,330 [Worker-132] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 11:48:06,331 [Worker-132] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-27 12:28:37,541 [Worker-141] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 12:28:37,543 [Worker-141] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-27 12:28:37,545 [Worker-141] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 12:28:37,545 [Worker-141] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-27 12:35:46,774 [Worker-140] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 12:35:46,775 [Worker-140] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-27 12:35:46,775 [Worker-140] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 12:35:46,775 [Worker-140] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-27 12:40:06,746 [Worker-152] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 12:40:06,747 [Worker-152] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-27 12:40:06,747 [Worker-152] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 12:40:06,748 [Worker-152] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-27 12:44:28,909 [Stop Help Server] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@169aeffd{HTTP/1.1,[http/1.1]}{127.0.0.1:0}
+2017-05-27 12:44:28,939 [Stop Help Server] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@6ce0ba2d{/help,null,UNAVAILABLE}
+2017-05-27 12:45:14,610 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 12:45:14,620 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-27 12:45:14,640 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 12:45:14,640 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-27 12:52:15,590 [Start Help Server] INFO  org.eclipse.jetty.util.log - Logging initialized @452784ms
+2017-05-27 12:52:15,708 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-9.3.9.v20160517
+2017-05-27 12:52:15,745 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@5f576886{/help,null,AVAILABLE}
+2017-05-27 12:52:15,763 [Start Help Server] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@5ec152a4{HTTP/1.1,[http/1.1]}{127.0.0.1:60799}
+2017-05-27 12:52:15,764 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started @452959ms
+2017-05-27 15:25:03,472 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 15:25:03,490 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-27 15:25:03,491 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 15:25:03,492 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-27 15:32:28,384 [Stop Help Server] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@5ec152a4{HTTP/1.1,[http/1.1]}{127.0.0.1:0}
+2017-05-27 15:32:28,394 [Stop Help Server] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@5f576886{/help,null,UNAVAILABLE}
+2017-05-27 15:32:50,726 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 15:32:50,734 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-27 15:32:50,742 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-27 15:32:50,742 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 09:18:33,226 [Start Help Server] INFO  org.eclipse.jetty.util.log - Logging initialized @63961035ms
+2017-05-28 09:18:33,349 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-9.3.9.v20160517
+2017-05-28 09:18:33,404 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@40e6ff99{/help,null,AVAILABLE}
+2017-05-28 09:18:33,421 [Start Help Server] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@20dbe860{HTTP/1.1,[http/1.1]}{127.0.0.1:51968}
+2017-05-28 09:18:33,422 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started @63961230ms
+2017-05-28 09:25:47,885 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 09:25:47,911 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 09:25:47,913 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 09:25:47,913 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 09:51:11,240 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 09:51:11,241 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 09:51:11,243 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 09:51:11,243 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 09:55:05,070 [Worker-65] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 09:55:05,071 [Worker-65] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 09:55:05,072 [Worker-65] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 09:55:05,073 [Worker-65] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 09:56:34,274 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 09:56:34,275 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 09:56:34,276 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 09:56:34,276 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 09:59:57,999 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 09:59:58,001 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 09:59:58,002 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 09:59:58,002 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 10:00:57,358 [Worker-68] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 10:00:57,360 [Worker-68] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 10:00:57,361 [Worker-68] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 10:00:57,361 [Worker-68] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 10:07:38,579 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 10:07:38,580 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 10:07:38,581 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 10:07:38,582 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 10:07:51,292 [Worker-81] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 10:07:51,294 [Worker-81] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 10:07:51,296 [Worker-81] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 10:07:51,296 [Worker-81] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 10:11:03,452 [Worker-78] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 10:11:03,453 [Worker-78] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 10:11:03,455 [Worker-78] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 10:11:03,455 [Worker-78] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 10:13:48,773 [Worker-82] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 10:13:48,774 [Worker-82] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 10:13:48,775 [Worker-82] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 10:13:48,775 [Worker-82] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 10:14:16,205 [Worker-89] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 10:14:16,206 [Worker-89] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 10:14:16,208 [Worker-89] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 10:14:16,208 [Worker-89] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 10:16:03,238 [Worker-78] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 10:16:03,239 [Worker-78] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 10:16:03,241 [Worker-78] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 10:16:03,242 [Worker-78] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 10:16:41,626 [Worker-82] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 10:16:41,628 [Worker-82] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 10:16:41,629 [Worker-82] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 10:16:41,630 [Worker-82] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 10:18:08,292 [Worker-78] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 10:18:08,293 [Worker-78] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 10:18:08,294 [Worker-78] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 10:18:08,294 [Worker-78] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 10:19:06,871 [Worker-78] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 10:19:06,872 [Worker-78] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 10:19:06,874 [Worker-78] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 10:19:06,874 [Worker-78] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 10:21:56,431 [Worker-93] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 10:21:56,432 [Worker-93] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 10:21:56,434 [Worker-93] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 10:21:56,434 [Worker-93] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 10:22:49,874 [Worker-94] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 10:22:49,875 [Worker-94] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 10:22:49,876 [Worker-94] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 10:22:49,876 [Worker-94] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 10:23:22,429 [Worker-96] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 10:23:22,430 [Worker-96] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 10:23:22,431 [Worker-96] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 10:23:22,431 [Worker-96] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 10:23:48,745 [Worker-78] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 10:23:48,745 [Worker-78] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 10:23:48,746 [Worker-78] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 10:23:48,746 [Worker-78] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 10:25:42,337 [Worker-82] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 10:25:42,338 [Worker-82] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 10:25:42,339 [Worker-82] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 10:25:42,339 [Worker-82] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 10:28:02,296 [Worker-94] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 10:28:02,297 [Worker-94] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 10:28:02,298 [Worker-94] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 10:28:02,299 [Worker-94] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 10:30:08,622 [Worker-99] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 10:30:08,623 [Worker-99] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 10:30:08,624 [Worker-99] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 10:30:08,624 [Worker-99] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 10:34:43,270 [Worker-95] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 10:34:43,271 [Worker-95] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 10:34:43,273 [Worker-95] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 10:34:43,273 [Worker-95] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 10:39:33,982 [Worker-113] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 10:39:33,983 [Worker-113] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 10:39:33,984 [Worker-113] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 10:39:33,985 [Worker-113] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 10:40:05,333 [Worker-114] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 10:40:05,334 [Worker-114] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 10:40:05,334 [Worker-114] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 10:40:05,334 [Worker-114] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 10:42:24,777 [Worker-112] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 10:42:24,778 [Worker-112] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 10:42:24,779 [Worker-112] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 10:42:24,779 [Worker-112] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 11:05:29,115 [Worker-134] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 11:05:29,117 [Worker-134] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 11:05:29,119 [Worker-134] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 11:05:29,120 [Worker-134] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 11:05:43,453 [Worker-130] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 11:05:43,453 [Worker-130] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 11:05:43,454 [Worker-130] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 11:05:43,454 [Worker-130] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 11:06:00,079 [Worker-135] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 11:06:00,080 [Worker-135] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 11:06:00,081 [Worker-135] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 11:06:00,081 [Worker-135] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 11:06:35,634 [Worker-134] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 11:06:35,635 [Worker-134] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 11:06:35,636 [Worker-134] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 11:06:35,636 [Worker-134] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 11:46:13,593 [Worker-154] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 11:46:13,594 [Worker-154] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 11:46:13,596 [Worker-154] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 11:46:13,596 [Worker-154] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 11:53:59,490 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 11:53:59,491 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 11:53:59,493 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 11:53:59,493 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 11:59:15,753 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 11:59:15,754 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 11:59:15,755 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 11:59:15,756 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 12:01:31,621 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 12:01:31,621 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 12:01:31,622 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 12:01:31,622 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 12:06:02,728 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 12:06:02,729 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 12:06:02,729 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 12:06:02,730 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 12:12:06,329 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 12:12:06,337 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 12:12:06,348 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 12:12:06,348 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 12:12:08,267 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 12:12:08,268 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-05-28 12:12:08,269 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 12:12:08,269 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 12:18:59,931 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 12:18:59,941 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 12:18:59,949 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 12:18:59,949 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 12:21:42,318 [Start Help Server] INFO  org.eclipse.jetty.util.log - Logging initialized @182715ms
+2017-05-28 12:21:42,430 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-9.3.9.v20160517
+2017-05-28 12:21:42,473 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@65b25dfb{/help,null,AVAILABLE}
+2017-05-28 12:21:42,492 [Start Help Server] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@26ea492d{HTTP/1.1,[http/1.1]}{127.0.0.1:55229}
+2017-05-28 12:21:42,492 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started @182889ms
+2017-05-28 12:31:59,772 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 12:31:59,780 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 12:31:59,781 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 12:31:59,782 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 14:14:36,028 [Worker-65] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 14:14:36,030 [Worker-65] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 14:14:36,032 [Worker-65] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 14:14:36,032 [Worker-65] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 14:19:14,385 [Worker-65] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 14:19:14,386 [Worker-65] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 14:19:14,388 [Worker-65] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 14:19:14,388 [Worker-65] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 14:22:23,466 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 14:22:23,467 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 14:22:23,469 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 14:22:23,469 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 14:25:20,953 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 14:25:20,954 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 14:25:20,954 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 14:25:20,955 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 14:26:40,416 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 14:26:40,417 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 14:26:40,419 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 14:26:40,419 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 16:46:48,786 [Worker-114] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 16:46:48,787 [Worker-114] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 16:46:48,789 [Worker-114] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 16:46:48,790 [Worker-114] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 16:48:07,168 [Worker-109] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 16:48:07,170 [Worker-109] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 16:48:07,171 [Worker-109] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 16:48:07,172 [Worker-109] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 16:55:48,957 [Worker-122] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 16:55:48,958 [Worker-122] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 16:55:48,960 [Worker-122] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 16:55:48,960 [Worker-122] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 16:56:32,822 [Worker-123] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 16:56:32,823 [Worker-123] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 16:56:32,825 [Worker-123] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 16:56:32,826 [Worker-123] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 17:01:49,964 [Worker-129] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:01:49,965 [Worker-129] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 17:01:49,966 [Worker-129] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:01:49,967 [Worker-129] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 17:04:57,585 [Worker-131] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:04:57,586 [Worker-131] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 17:04:57,588 [Worker-131] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:04:57,588 [Worker-131] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 17:05:14,144 [Worker-130] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:05:14,145 [Worker-130] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 17:05:14,146 [Worker-130] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:05:14,147 [Worker-130] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 17:08:13,861 [Worker-135] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:08:13,862 [Worker-135] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 17:08:13,863 [Worker-135] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:08:13,863 [Worker-135] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 17:13:39,815 [Worker-147] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:13:39,815 [Worker-147] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 17:13:39,817 [Worker-147] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:13:39,818 [Worker-147] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 17:18:24,724 [Worker-143] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:18:24,725 [Worker-143] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 17:18:24,726 [Worker-143] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:18:24,726 [Worker-143] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 17:23:37,769 [Worker-165] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:23:37,770 [Worker-165] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 17:23:37,771 [Worker-165] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:23:37,771 [Worker-165] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 17:23:55,957 [Worker-146] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:23:55,958 [Worker-146] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 17:23:55,959 [Worker-146] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:23:55,959 [Worker-146] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 17:24:26,616 [Worker-168] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:24:26,617 [Worker-168] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 17:24:26,618 [Worker-168] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:24:26,618 [Worker-168] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 17:27:18,926 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:27:18,927 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 17:27:18,929 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:27:18,929 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 17:27:32,857 [Worker-172] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:27:32,857 [Worker-172] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 17:27:32,859 [Worker-172] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:27:32,859 [Worker-172] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 17:27:57,766 [Worker-171] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:27:57,768 [Worker-171] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 17:27:57,769 [Worker-171] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:27:57,769 [Worker-171] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 17:29:25,781 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:29:25,782 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 17:29:25,784 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:29:25,784 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 17:32:58,829 [Worker-176] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:32:58,831 [Worker-176] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 17:32:58,833 [Worker-176] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:32:58,833 [Worker-176] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 17:39:29,852 [Worker-185] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:39:29,854 [Worker-185] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 17:39:29,855 [Worker-185] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:39:29,856 [Worker-185] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 17:39:41,283 [Worker-184] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:39:41,284 [Worker-184] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 17:39:41,285 [Worker-184] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:39:41,286 [Worker-184] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 17:40:31,277 [Worker-186] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:40:31,277 [Worker-186] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 17:40:31,278 [Worker-186] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:40:31,279 [Worker-186] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 17:42:57,933 [Worker-187] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:42:57,934 [Worker-187] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 17:42:57,935 [Worker-187] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:42:57,935 [Worker-187] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 17:45:23,409 [Worker-191] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:45:23,410 [Worker-191] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 17:45:23,411 [Worker-191] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:45:23,411 [Worker-191] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 17:45:34,986 [Worker-192] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:45:34,987 [Worker-192] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 17:45:34,989 [Worker-192] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:45:34,989 [Worker-192] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 17:46:14,360 [Worker-192] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:46:14,360 [Worker-192] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 17:46:14,361 [Worker-192] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:46:14,362 [Worker-192] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 17:46:24,409 [Worker-185] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:46:24,410 [Worker-185] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 17:46:24,411 [Worker-185] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:46:24,411 [Worker-185] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 17:46:33,669 [Worker-190] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:46:33,670 [Worker-190] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 17:46:33,671 [Worker-190] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:46:33,671 [Worker-190] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 17:46:59,965 [Worker-195] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:46:59,965 [Worker-195] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 17:46:59,966 [Worker-195] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:46:59,966 [Worker-195] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 17:48:43,852 [Worker-191] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:48:43,853 [Worker-191] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 17:48:43,854 [Worker-191] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:48:43,854 [Worker-191] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 17:49:24,693 [Worker-185] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:49:24,694 [Worker-185] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 17:49:24,695 [Worker-185] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:49:24,696 [Worker-185] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 17:50:16,754 [Worker-191] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:50:16,755 [Worker-191] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 17:50:16,757 [Worker-191] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:50:16,757 [Worker-191] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 17:53:10,114 [Worker-192] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:53:10,115 [Worker-192] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 17:53:10,116 [Worker-192] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 17:53:10,117 [Worker-192] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 21:28:09,337 [Worker-264] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 21:28:09,338 [Worker-264] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 21:28:09,339 [Worker-264] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 21:28:09,339 [Worker-264] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 21:28:32,476 [Worker-264] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 21:28:32,477 [Worker-264] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 21:28:32,478 [Worker-264] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 21:28:32,478 [Worker-264] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 21:29:06,013 [Worker-265] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 21:29:06,014 [Worker-265] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 21:29:06,015 [Worker-265] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 21:29:06,015 [Worker-265] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 21:33:21,476 [Worker-265] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 21:33:21,477 [Worker-265] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 21:33:21,478 [Worker-265] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 21:33:21,478 [Worker-265] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 21:33:48,924 [Worker-271] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 21:33:48,924 [Worker-271] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 21:33:48,926 [Worker-271] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 21:33:48,926 [Worker-271] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 21:34:43,959 [Worker-272] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 21:34:43,960 [Worker-272] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 21:34:43,961 [Worker-272] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 21:34:43,961 [Worker-272] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 21:39:59,276 [Worker-262] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 21:39:59,277 [Worker-262] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 21:39:59,278 [Worker-262] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 21:39:59,278 [Worker-262] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 21:42:12,274 [Worker-264] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 21:42:12,275 [Worker-264] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 21:42:12,277 [Worker-264] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 21:42:12,277 [Worker-264] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 21:44:26,612 [Worker-275] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 21:44:26,613 [Worker-275] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 21:44:26,613 [Worker-275] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 21:44:26,614 [Worker-275] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 21:44:39,222 [Worker-268] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 21:44:39,223 [Worker-268] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 21:44:39,224 [Worker-268] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 21:44:39,224 [Worker-268] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 21:46:00,239 [Worker-269] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 21:46:00,240 [Worker-269] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 21:46:00,241 [Worker-269] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 21:46:00,241 [Worker-269] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 21:53:22,596 [Worker-280] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 21:53:22,597 [Worker-280] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 21:53:22,598 [Worker-280] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 21:53:22,598 [Worker-280] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 21:55:22,442 [Worker-281] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 21:55:22,443 [Worker-281] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 21:55:22,444 [Worker-281] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 21:55:22,444 [Worker-281] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 21:57:32,710 [Worker-289] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 21:57:32,711 [Worker-289] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 21:57:32,712 [Worker-289] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 21:57:32,713 [Worker-289] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 21:58:59,388 [Worker-292] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 21:58:59,389 [Worker-292] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 21:58:59,390 [Worker-292] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 21:58:59,390 [Worker-292] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 21:59:13,413 [Worker-289] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 21:59:13,414 [Worker-289] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 21:59:13,416 [Worker-289] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 21:59:13,416 [Worker-289] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 22:01:15,640 [Worker-282] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 22:01:15,641 [Worker-282] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 22:01:15,642 [Worker-282] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 22:01:15,642 [Worker-282] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 22:08:39,849 [Worker-303] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 22:08:39,850 [Worker-303] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 22:08:39,851 [Worker-303] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 22:08:39,851 [Worker-303] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 22:08:58,444 [Worker-289] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 22:08:58,445 [Worker-289] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 22:08:58,446 [Worker-289] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 22:08:58,446 [Worker-289] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 22:09:33,131 [Worker-301] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 22:09:33,131 [Worker-301] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 22:09:33,132 [Worker-301] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 22:09:33,132 [Worker-301] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 22:20:10,424 [Worker-307] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 22:20:10,424 [Worker-307] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 22:20:10,425 [Worker-307] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 22:20:10,426 [Worker-307] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 22:20:18,354 [Worker-308] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 22:20:18,355 [Worker-308] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 22:20:18,356 [Worker-308] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 22:20:18,357 [Worker-308] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 22:21:34,649 [Worker-308] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 22:21:34,650 [Worker-308] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 22:21:34,650 [Worker-308] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 22:21:34,650 [Worker-308] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 22:22:54,647 [Worker-306] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 22:22:54,647 [Worker-306] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 22:22:54,648 [Worker-306] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 22:22:54,648 [Worker-306] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 22:23:37,323 [Worker-308] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 22:23:37,324 [Worker-308] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 22:23:37,325 [Worker-308] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 22:23:37,325 [Worker-308] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 22:25:02,001 [Worker-306] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 22:25:02,002 [Worker-306] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 22:25:02,003 [Worker-306] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 22:25:02,003 [Worker-306] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 22:26:29,965 [Worker-306] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 22:26:29,966 [Worker-306] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 22:26:29,967 [Worker-306] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 22:26:29,967 [Worker-306] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 22:31:04,712 [Worker-305] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 22:31:04,713 [Worker-305] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 22:31:04,714 [Worker-305] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 22:31:04,714 [Worker-305] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 22:35:10,016 [Worker-316] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 22:35:10,017 [Worker-316] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 22:35:10,018 [Worker-316] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 22:35:10,018 [Worker-316] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 22:36:19,969 [Worker-324] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 22:36:19,970 [Worker-324] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 22:36:19,971 [Worker-324] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 22:36:19,971 [Worker-324] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 22:44:19,316 [Worker-328] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 22:44:19,317 [Worker-328] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 22:44:19,318 [Worker-328] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 22:44:19,318 [Worker-328] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 22:44:52,414 [Worker-328] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 22:44:52,415 [Worker-328] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 22:44:52,416 [Worker-328] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 22:44:52,417 [Worker-328] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 22:51:38,278 [Worker-329] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 22:51:38,279 [Worker-329] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 22:51:38,281 [Worker-329] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 22:51:38,281 [Worker-329] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 22:56:06,281 [Worker-336] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 22:56:06,282 [Worker-336] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 22:56:06,282 [Worker-336] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 22:56:06,283 [Worker-336] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-28 22:58:04,570 [Worker-336] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 22:58:04,571 [Worker-336] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-28 22:58:04,572 [Worker-336] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-28 22:58:04,572 [Worker-336] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-29 07:39:16,263 [Worker-354] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-29 07:39:16,265 [Worker-354] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-29 07:39:16,266 [Worker-354] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-29 07:39:16,266 [Worker-354] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-29 07:44:37,162 [Worker-357] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-29 07:44:37,163 [Worker-357] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-29 07:44:37,163 [Worker-357] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-29 07:44:37,164 [Worker-357] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-29 09:49:04,211 [Worker-384] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-29 09:49:04,213 [Worker-384] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-29 09:49:04,214 [Worker-384] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-29 09:49:04,214 [Worker-384] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-29 09:49:32,357 [Worker-385] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-29 09:49:32,357 [Worker-385] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-29 09:49:32,358 [Worker-385] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-29 09:49:32,358 [Worker-385] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-29 09:52:29,093 [Worker-381] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-29 09:52:29,094 [Worker-381] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-29 09:52:29,095 [Worker-381] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-29 09:52:29,096 [Worker-381] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-29 09:55:51,204 [Worker-390] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-29 09:55:51,205 [Worker-390] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-29 09:55:51,205 [Worker-390] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-29 09:55:51,206 [Worker-390] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-29 12:06:22,124 [Worker-427] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-29 12:06:22,128 [Worker-427] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-29 12:06:22,129 [Worker-427] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-29 12:06:22,129 [Worker-427] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-29 12:37:31,863 [Worker-440] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-29 12:37:31,864 [Worker-440] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-29 12:37:31,865 [Worker-440] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-29 12:37:31,865 [Worker-440] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-29 12:38:12,896 [Worker-442] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-29 12:38:12,898 [Worker-442] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-29 12:38:12,899 [Worker-442] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-29 12:38:12,899 [Worker-442] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-29 12:41:28,298 [Worker-438] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-29 12:41:28,298 [Worker-438] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-29 12:41:28,300 [Worker-438] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-29 12:41:28,300 [Worker-438] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-29 12:43:06,423 [Worker-444] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-29 12:43:06,425 [Worker-444] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-29 12:43:06,426 [Worker-444] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-29 12:43:06,426 [Worker-444] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-29 15:50:01,964 [Worker-508] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-29 15:50:01,965 [Worker-508] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-29 15:50:01,966 [Worker-508] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-29 15:50:01,966 [Worker-508] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-29 15:50:12,498 [Worker-515] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-29 15:50:12,499 [Worker-515] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-29 15:50:12,500 [Worker-515] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-29 15:50:12,500 [Worker-515] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-29 15:53:46,321 [Worker-516] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-29 15:53:46,321 [Worker-516] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-29 15:53:46,323 [Worker-516] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-29 15:53:46,323 [Worker-516] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-29 15:54:04,409 [Worker-515] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-29 15:54:04,409 [Worker-515] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-29 15:54:04,410 [Worker-515] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-29 15:54:04,411 [Worker-515] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-29 15:54:18,835 [Worker-516] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-29 15:54:18,835 [Worker-516] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-29 15:54:18,836 [Worker-516] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-29 15:54:18,836 [Worker-516] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-29 15:54:51,552 [Worker-516] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-29 15:54:51,552 [Worker-516] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-29 15:54:51,553 [Worker-516] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-29 15:54:51,553 [Worker-516] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-29 15:55:47,914 [Worker-524] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-29 15:55:47,915 [Worker-524] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-29 15:55:47,915 [Worker-524] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-29 15:55:47,915 [Worker-524] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-29 16:50:02,737 [Worker-540] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-29 16:50:02,738 [Worker-540] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-29 16:50:02,739 [Worker-540] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-29 16:50:02,739 [Worker-540] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-29 16:53:49,684 [Worker-516] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-29 16:53:49,685 [Worker-516] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-29 16:53:49,686 [Worker-516] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-29 16:53:49,687 [Worker-516] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-29 16:55:11,777 [Worker-544] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-29 16:55:11,777 [Worker-544] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-29 16:55:11,779 [Worker-544] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-29 16:55:11,779 [Worker-544] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-29 17:09:27,054 [Worker-542] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-29 17:09:27,055 [Worker-542] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-29 17:09:27,056 [Worker-542] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-29 17:09:27,056 [Worker-542] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-29 17:10:34,289 [Worker-545] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-29 17:10:34,290 [Worker-545] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-29 17:10:34,291 [Worker-545] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-29 17:10:34,292 [Worker-545] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-29 17:13:10,470 [Worker-556] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-29 17:13:10,471 [Worker-556] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-29 17:13:10,472 [Worker-556] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-29 17:13:10,472 [Worker-556] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-29 17:13:52,858 [Worker-557] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-29 17:13:52,859 [Worker-557] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-29 17:13:52,859 [Worker-557] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-29 17:13:52,859 [Worker-557] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-30 08:02:13,914 [Worker-632] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-30 08:02:13,916 [Worker-632] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-30 08:02:13,917 [Worker-632] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-30 08:02:13,917 [Worker-632] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-30 08:02:29,375 [Worker-631] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-30 08:02:29,376 [Worker-631] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-30 08:02:29,377 [Worker-631] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-30 08:02:29,377 [Worker-631] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-30 08:03:07,636 [Worker-627] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-30 08:03:07,637 [Worker-627] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-30 08:03:07,638 [Worker-627] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-30 08:03:07,638 [Worker-627] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-30 08:04:36,619 [Worker-635] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-30 08:04:36,620 [Worker-635] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-30 08:04:36,621 [Worker-635] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-30 08:04:36,621 [Worker-635] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-30 08:08:34,036 [Worker-637] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-30 08:08:34,037 [Worker-637] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-30 08:08:34,038 [Worker-637] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-30 08:08:34,038 [Worker-637] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-30 09:15:04,340 [Worker-649] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-30 09:15:04,343 [Worker-649] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-30 09:15:04,343 [Worker-649] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-30 09:15:04,344 [Worker-649] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-30 09:21:09,224 [Worker-655] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-30 09:21:09,225 [Worker-655] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-30 09:21:09,227 [Worker-655] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-30 09:21:09,227 [Worker-655] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-30 09:21:25,625 [Worker-656] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-30 09:21:25,626 [Worker-656] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-30 09:21:25,627 [Worker-656] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-30 09:21:25,628 [Worker-656] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-30 09:22:04,238 [Worker-656] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-30 09:22:04,239 [Worker-656] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-30 09:22:04,240 [Worker-656] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-30 09:22:04,240 [Worker-656] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-30 09:28:17,831 [Worker-661] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-30 09:28:17,833 [Worker-661] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-30 09:28:17,833 [Worker-661] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-30 09:28:17,833 [Worker-661] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-30 09:28:28,054 [Worker-665] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-30 09:28:28,055 [Worker-665] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-30 09:28:28,055 [Worker-665] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-30 09:28:28,055 [Worker-665] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-30 09:29:38,909 [Worker-667] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-30 09:29:38,910 [Worker-667] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-30 09:29:38,911 [Worker-667] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-30 09:29:38,911 [Worker-667] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-30 09:40:10,958 [Worker-668] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-30 09:40:10,959 [Worker-668] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-30 09:40:10,962 [Worker-668] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-30 09:40:10,962 [Worker-668] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources
+2017-05-30 09:44:05,935 [Worker-680] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-30 09:44:05,936 [Worker-680] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-05-30 09:44:05,936 [Worker-680] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-05-30 09:44:05,937 [Worker-680] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Personal\CMAD\Project_final\BloggingApp\src\test\resources

@@ -12,11 +12,15 @@ import javax.persistence.CollectionTable;
 import javax.persistence.Column;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.MapKeyColumn;
+import javax.persistence.MapKeyJoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 @XmlRootElement
 @Entity
@@ -35,7 +39,7 @@ public class UserDetails {
 	private long mobileno;
 	
 	@Column(name="REGISTRATION_DATE")
-	private Date reg_date;
+	private Date reg_date = new Date();
 	
 	@Id
 	@Column(name="USER_ID")
@@ -44,7 +48,11 @@ public class UserDetails {
 	@Column(name="PASSWORD")
 	private String password;
 	
-	@OneToMany(mappedBy="user")
+	
+	@OneToMany(mappedBy="user",fetch=FetchType.LAZY)
+//	@CollectionTable(name="BlogPost")
+	@MapKeyColumn(name="BLOGID_KEY",nullable=true)
+	@Column(name="blogpostid")
 	private Map<String, BlogPost> bloglist = new HashMap<String, BlogPost>();
 	
 //	@OneToOne(cascade=CascadeType.PERSIST,mappedBy="userdetails")
@@ -75,23 +83,23 @@ public class UserDetails {
 		this.bloglist = bloglist;
 	}
 
-	public UserDetails() {
-		
-		this.reg_date=new Date();
-		
-	}
+//	public UserDetails() {
+//		
+//		//this.reg_date=new Date();
+//		
+//	}
 	
-	public UserDetails(String emailid, String fullname, String address, long mobileno,
-					   String userid, String password ) {
-		
-		this.emailid=emailid;
-		this.fullname=fullname;
-		this.address=address;
-		this.mobileno=mobileno;
-		this.reg_date=new Date();
-		this.userid=userid;
-		this.password=password;
-	}
+//	public UserDetails(String emailid, String fullname, String address, long mobileno,
+//					   String userid, String password ) {
+//		
+//		this.emailid=emailid;
+//		this.fullname=fullname;
+//		this.address=address;
+//		this.mobileno=mobileno;
+//		this.reg_date=new Date();
+//		this.userid=userid;
+//		this.password=password;
+//	}
 
 	public String getEmailid() {
 		return emailid;

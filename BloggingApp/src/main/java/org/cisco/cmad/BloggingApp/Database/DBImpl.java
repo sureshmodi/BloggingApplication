@@ -141,28 +141,28 @@ public Vehicles retrieveVehicle(String vehicleid) {
 
 public void createUserdetails() {
 	
-	UserDetails userdetails = new UserDetails("sureshmodhi@gmail.com","Suresh Modi","Nandi Park",
-											   9008505599L,"sureshmodi","abcdef");
+	//UserDetails userdetails = new UserDetails("sureshmodhi@gmail.com","Suresh Modi","Nandi Park",
+	//										   9008505599L,"sureshmodi","abcdef");
 	
 	BlogPost blogpost1 = new BlogPost();
-	blogpost1.setBlogpostid("#BLOG1");
+	
 	blogpost1.setTitle("MATHS");
 	blogpost1.setBlogContent("Topic about Algebra");
-	blogpost1.setUser(userdetails);
+	//blogpost1.setUser(userdetails);
 	
 	Comments comment1= new Comments();
 	comment1.setComment("#comment1");
 	
     blogpost1.getCommentslist().add(comment1);
-    userdetails.getBloglist().put(blogpost1.getBlogpostid(), blogpost1);
-    blogpost1.setUser(userdetails);
-    comment1.setBlogpost(blogpost1);
+    //userdetails.getBloglist().put("blog1", blogpost1);
+    //blogpost1.setUser(userdetails);
+   // comment1.setBlogpost(blogpost1);
     
 	EntityManager em = factory.createEntityManager();
 	EntityTransaction tx = em.getTransaction();
 	tx.begin();
 	
-	em.persist(userdetails);
+	//em.persist(userdetails);
 	em.persist(blogpost1);
 	em.persist(comment1);
 	
