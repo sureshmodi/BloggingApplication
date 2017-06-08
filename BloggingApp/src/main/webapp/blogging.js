@@ -41,7 +41,7 @@ $(document).ready(function() {
 	  var registerpassword = $("#registerpassword").val();
 	  var name = $("#name").val();
 	  var contactno = $("#contact").val();
-	  var registeremail = $("#registermail").val();
+	  var registeremail = $("#registeremail").val();
       var address = $("#address").val();
 
 	  var registeruser = {
@@ -56,7 +56,7 @@ $(document).ready(function() {
 	  $('#target').html('sending..');
 
 	  $.ajax({
-			url : '/BloggingApp/webapi/Blogging/user/register',
+			url : '/BloggingApp/webapi/blogging/user/register',
 			type : 'post',
 			dataType : 'json',
 			contentType: "application/json; charset=utf-8",

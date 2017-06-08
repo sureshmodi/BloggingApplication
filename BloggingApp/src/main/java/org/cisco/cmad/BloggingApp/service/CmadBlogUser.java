@@ -48,6 +48,7 @@ public class CmadBlogUser implements BlogUser{
 		if (userdb != null) {
 			
 			if ((user.getPassword().equals(userdb.getPassword()))) {
+				userdb.setPassword("xxxxxx");
 				return userdb;
 				
 			} else {
