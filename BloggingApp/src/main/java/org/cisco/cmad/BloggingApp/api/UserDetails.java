@@ -1,5 +1,6 @@
 package org.cisco.cmad.BloggingApp.api;
 
+import java.net.URI;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -19,11 +20,17 @@ import javax.persistence.MapKeyColumn;
 import javax.persistence.MapKeyJoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
+import javax.persistence.Table;
+import javax.persistence.Transient;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
 @XmlRootElement
 @Entity
+@XmlAccessorType(XmlAccessType.FIELD)
+@Table(name="USER_DETAILS")
 public class UserDetails {
 	
 	@Column(name="EMAIL_ID")
@@ -47,16 +54,17 @@ public class UserDetails {
 	
 	@Column(name="PASSWORD")
 	private String password;
+		
+	@Transient
+	private List<Link> links = new ArrayList<>();
 	
 	
-	@OneToMany(mappedBy="user",fetch=FetchType.LAZY)
+	@OneToMany(mappedBy="user",fetch=FetchType.LAZY,cascade={CascadeType.REMOVE})
 //	@CollectionTable(name="BlogPost")
 	@MapKeyColumn(name="BLOGID_KEY",nullable=true)
 	@Column(name="blogpostid")
-	private Map<String, BlogPost> bloglist = new HashMap<String, BlogPost>();
-	
-//	@OneToOne(cascade=CascadeType.PERSIST,mappedBy="userdetails")
-//	private UserCredentials usercredentials;
+	@XmlTransient
+	private Map<String, BlogPostEntity> bloglist = new HashMap<String, BlogPostEntity>();
 	
 	
 	public String getUserid() {
@@ -75,19 +83,19 @@ public class UserDetails {
 		this.password = password;
 	}
 
-	public Map<String, BlogPost> getBloglist() {
+	public Map<String, BlogPostEntity> getBloglist() {
 		return bloglist;
 	}
 
-	public void setBloglist(Map<String, BlogPost> bloglist) {
+	public void setBloglist(Map<String, BlogPostEntity> bloglist) {
 		this.bloglist = bloglist;
 	}
 
-//	public UserDetails() {
-//		
-//		//this.reg_date=new Date();
-//		
-//	}
+	public UserDetails() {
+		
+		//this.reg_date=new Date();
+		
+	}
 	
 //	public UserDetails(String emailid, String fullname, String address, long mobileno,
 //					   String userid, String password ) {
@@ -141,12 +149,21 @@ public class UserDetails {
 		this.reg_date = reg_date;
 	}
 	
-//	public UserCredentials getUsercredentials() {
-//		return usercredentials;
-//	}
-//
-//	public void setUsercredentials(UserCredentials usercredentials) {
-//		this.usercredentials = usercredentials;
-//	}
+	public List<Link> getLinks() {
+		return links;
+	}
+
+	public void setLinks(List<Link> links) {
+		this.links = links;
+	}
+
+	public void addLinks(URI uri, String ref) {
+
+			Link link = new Link();
+			link.setUri(uri);
+			link.setReference(ref);
+			links.add(link);
+			
+	}
 	
 }

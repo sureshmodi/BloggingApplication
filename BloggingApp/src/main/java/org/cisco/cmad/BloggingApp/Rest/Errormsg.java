@@ -1,4 +1,4 @@
-package org.cisco.cmad.BloggingApp.RestResources;
+package org.cisco.cmad.BloggingApp.Rest;
 
 import javax.xml.bind.annotation.XmlRootElement;
 

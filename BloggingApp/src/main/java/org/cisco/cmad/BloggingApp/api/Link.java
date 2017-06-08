@@ -1,22 +1,25 @@
 package org.cisco.cmad.BloggingApp.api;
 
+import java.net.URI;
+
 public class Link {
 	
-			String uri;
-			String rel;
-			public String getUri() {
+			URI uri;
+			String reference;
+			public URI getUri() {
 				return uri;
 			}
-			public void setUri(String uri) {
-				this.uri = uri;
+			public void setUri(URI uri2) {
+				this.uri = uri2;
 			}
-			public String getRel() {
-				return rel;
+			public String getReference() {
+				return reference;
 			}
-			public void setRel(String rel) {
-				this.rel = rel;
+			public void setReference(String reference) {
+				this.reference = reference;
 			}
 			
+						
 					
 
 }
