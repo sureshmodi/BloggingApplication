@@ -1,0 +1,12 @@
+package org.cisco.cmad.BloggingApp.api;
+
+import java.util.List;
+
+public interface BlogPost {
+	
+	public void createBlogpost(BlogPostEntity blogpost,String userid);
+    public BlogPostEntity deleteBlogpost(String blogpostid);
+    public BlogPostEntity getBlogpost(String blogpostid,String userid);
+    public List<BlogPostEntity> getallBlogPosts();
+
+}

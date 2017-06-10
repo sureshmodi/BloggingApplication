@@ -1,0 +1,10 @@
+package org.cisco.cmad.BloggingApp.api;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class CommentsList {
+	
+	private static List<Comments> commentsList = new ArrayList<>();
+
+}

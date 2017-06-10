@@ -1,0 +1,9 @@
+package org.cisco.cmad.BloggingApp.Database;
+
+import org.cisco.cmad.BloggingApp.api.Comments;
+
+public interface CommentsDAOInf {
+	
+	public Comments postComments(Comments comment,String blogid);
+
+}

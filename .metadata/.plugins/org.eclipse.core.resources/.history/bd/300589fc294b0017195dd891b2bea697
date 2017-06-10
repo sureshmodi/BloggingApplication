@@ -1,0 +1,22 @@
+package org.cisco.cmad.BloggingApp.Exception;
+
+import javax.ws.rs.core.Response;
+import javax.ws.rs.core.Response.Status;
+import javax.ws.rs.ext.ExceptionMapper;
+import javax.ws.rs.ext.Provider;
+
+import org.cisco.cmad.BloggingApp.api.ExceptionModel;
+
+@Provider
+public class BloggingAppExceptionMapper implements ExceptionMapper<Throwable> {
+
+	
+	@Override
+	public Response toResponse(Throwable exception) {
+		ExceptionModel excepmodel = new ExceptionModel(exception.getMessage(), 404);
+		return Response.status(Status.NOT_FOUND).entity(excepmodel).build();
+	}
+	
+
+
+}
