@@ -1,8 +1,0 @@
-package org.cisco.cmad.BloggingApp.api;
-
-public interface BlogPost {
-	
-	public String createBlogpost();
-
-	
-}
