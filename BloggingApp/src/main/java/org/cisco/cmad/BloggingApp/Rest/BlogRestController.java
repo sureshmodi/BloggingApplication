@@ -27,6 +27,7 @@ import org.cisco.cmad.BloggingApp.api.BlogPostEntity;
 import org.cisco.cmad.BloggingApp.api.BlogUser;
 import org.cisco.cmad.BloggingApp.api.Comments;
 import org.cisco.cmad.BloggingApp.api.CommentsList;
+import org.cisco.cmad.BloggingApp.api.ErrorMsg;
 import org.cisco.cmad.BloggingApp.api.UserDetails;
 import org.cisco.cmad.BloggingApp.service.CmadBlogPost;
 import org.cisco.cmad.BloggingApp.service.CmadBlogUser;
@@ -106,8 +107,12 @@ public class BlogRestController {
 
 	@Path("/user/login")
 	public Response userLogin(UserDetails user,@Context UriInfo uriinfo) {
-				
-			UserDetails userdb = bloguser.userLogin(user);
+			
+		UserDetails userdb = null;
+		ErrorMsg errormsg= new ErrorMsg();
+		
+		if (user.getUserid()!=null && user.getPassword()!=null) {
+			userdb = bloguser.userLogin(user);
 		
 			
 			Set<String> keys = userdb.getBloglist().keySet();
@@ -120,7 +125,13 @@ public class BlogRestController {
 						userdb.addLinks(uri,userdb.getBloglist().get(key).getBlogpostid());
 			}
 				       									
-			return Response.status(Status.FOUND).entity(userdb).build();
+			return Response.status(Status.OK).entity(userdb).build();
+			
+		} else {
+			errormsg.setErrormsg("UserID/Password is empty");
+			errormsg.setErrorcode(400);
+			return Response.status(Status.BAD_REQUEST).entity(errormsg).build();	
+		}
 							   
 	
 	}

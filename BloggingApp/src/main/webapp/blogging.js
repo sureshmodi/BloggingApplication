@@ -2,31 +2,53 @@ $(document).ready(function() {
   // On Click SignIn Button Checks For Valid E-mail And All Field Should Be Filled
   $("#login").click(function() {
     var email = new RegExp(/^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i);
-    if ($("#loginemail").val() == '' || $("#loginpassword").val() == '') {
+    if ($("#loginuserid").val() == '' || $("#loginpassword").val() == '') {
       alert("Please fill all fields...!!!!!!");
-    } else if (!($("#loginemail").val()).match(email)) {
-      alert("Please enter valid Email...!!!!!!");
     } else {
-		var loginmail = $("#loginmail").val();
-		var password = $("#password").val();
+		var loginid = $("#loginuserid").val();
+		var password = $("#loginpassword").val();
 		var user = {
-			"loginmail" : loginmail,
+			"userid" : loginid,
 			"password" : password
 		};
-
-//		$.ajax({
-//			url : '/BloggingApp/webapi/blogging/user/register',
-//			type : 'post',
-//			dataType : 'json',
-//			contentType: "application/json; charset=utf-8",
-//			success : function(data) {
-//			    alert("You have successfully Logged in...!!!!!!");
-//				$("#addResult").show();
-//			},
-//			data : JSON.stringify(user)
-//		});
-      alert("You have successfully Logged in...!!!!!!");
-      $("form")[0].reset();
+	   
+	    alert("sending ajax query...!!!!!!");
+		//$('#target').html('sending..');
+		$.ajax({
+			url : '/BloggingApp/webapi/blogging/user/login',
+			type : 'post',
+			dataType : 'json',
+			contentType: "application/json; charset=utf-8",
+			data : JSON.stringify(user),
+			success : function(data) {
+			    alert("You have successfully Logged in...!!!!!!");
+		        //$("#first").slideUp("slow");
+		        $("#headerlogin").hide();
+		        $("#headerhome").show();
+		        $("#headercreatepost").show();
+		        $("#headerupdateprofile").show();
+		        $("#headerlogout").show();
+		        $("#first").hide();
+		        //$("#second").hide();
+		        $("#bloglist").show();
+		        document.getElementById("loginform").reset();
+			},
+		    statusCode: {
+		        401: function() {
+		          alert('Either User ID or Password is incorrect. Please Signup or Login again!!!');
+		          document.getElementById("loginform").reset();
+		        },
+		        400: function() {
+		          alert('bad request');
+		          document.getElementById("loginform").reset();
+		        },
+   	            500: function() {
+			      alert('bad request');
+			      document.getElementById("loginform").reset();
+			    }
+		    }
+		    
+		});
     }
   });
   
@@ -60,17 +82,32 @@ $(document).ready(function() {
 			type : 'post',
 			dataType : 'json',
 			contentType: "application/json; charset=utf-8",
+			data : JSON.stringify(registeruser),
 			success : function(data) {
 		      alert("You have successfully Sign Up, Now you can login...!!!!!!");
-		      $('#target').html(data.msg);
+		      //$('#target').html(data.msg);
+		      $("#form")[0].reset();
+		      $("#second").slideUp("slow", function() {
+		        $("#first").slideDown("slow");
+		      });
 			},
-			data : JSON.stringify(registeruser)
+		    statusCode: {
+		        409: function() {
+		          alert('User Id already exists. User different User id for registration...!!!');
+		          $("#form")[0].reset();
+		        },
+		        400: function() {
+		          alert('bad request');
+		          $("#form")[0].reset();
+		        },
+   	            500: function() {
+			      alert('bad request');
+			      $("#form")[0].reset();
+			    }	        
+		    }
+
 	  });
 
-      $("#form")[0].reset();
-      $("#second").slideUp("slow", function() {
-        $("#first").slideDown("slow");
-      });
     }
   });
   
@@ -87,4 +124,86 @@ $(document).ready(function() {
       $("#first").slideDown("slow");
     });
   });
+  
+  $('#createpost').click(function(){
+	  $('#bloglist').hide();
+	  $('#displayblogpost').hide();
+	  $('#createblogpost').show();
+  });
+
+  $('#updateprofile').click(function(){
+	  $('#bloglist').hide();
+	  $('#displayblogpost').hide();
+	  $('#createblogpost').hide();
+	  //Using GET method get the details
+	  //Display user details
+	  alert("profile updated successfully!!!");
+  });
+  
+  $("#headerloginform").click(function(){
+	  $("#bloglist").hide();
+	  $("#displayblogpost").hide();
+	  //$('#createblogpost').hide();
+	  //Using GET method get the details
+	  //Display user details
+	  $("#second").hide();
+	  $("#first").show();
+  });
+
+  
+  $("#createblogpostsubmit").click(function() {
+	  $('#createblogpost').hide();
+	  alert("Post created successfully!!!");
+	  $('#bloglist').show();
+  });
+  
+  $("#home").click(function() {
+	  $('#createblogpost').hide();
+	  $('#displayblogpost').hide();
+	  $('#first').hide();
+	  $('#second').hide();
+	  $('#bloglist').hide();
+	  //$("#displayposts").hide();
+	  alert("Fetched all posts successfully!!!");
+	  $('#bloglist').show();
+  });
+
+  $("#displayposts").click(function() {
+	  $('#createblogpost').hide();
+	  $('#displayblogpost').hide();
+	  $('#first').hide();
+	  $('#second').hide();
+	  $('#bloglist').hide();
+	  alert("Fetched all posts successfully!!!");
+	  $('#bloglist').show();
+  });
+
+
+  $('#blogpostdetails').click(function(){
+	  $('#bloglist').hide();
+	  alert("Fetched blog post details successfully!!!");
+	  $('#displayblogpost').show();
+  });
+  
+  $('#blogpostdelete').click(function(){
+	  $('#bloglist').hide();
+	  alert("Post deleted successfully!!!");	  
+	  $('#bloglist').show();
+  });
+
+
+  $('#logout').click(function(){
+	  alert("Succesfully logged out !!!");
+	  //$('#blogheader').hide();
+	  $('#bloglist').hide();
+	  $('#createblogpost').hide();
+	  $('#displayblogpost').hide();
+      $("#headercreatepost").hide();
+      $("#headerhome").hide();
+      $("#headerlogin").show();
+      $("#headerlogout").hide();
+      $("#headerupdateprofile").hide();
+	  $('#first').show();
+  });
+  
 });

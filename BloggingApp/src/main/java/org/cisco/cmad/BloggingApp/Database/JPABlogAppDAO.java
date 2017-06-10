@@ -15,6 +15,7 @@ import javax.persistence.Persistence;
 import org.cisco.cmad.BloggingApp.api.BlogPostEntity;
 import org.cisco.cmad.BloggingApp.api.Comments;
 import org.cisco.cmad.BloggingApp.api.UserDetails;
+import org.cisco.cmad.BloggingApp.api.UserRegistrationFailedException;
 
 public class JPABlogAppDAO implements BlogPostDAOInf,UserDAOInf,CommentsDAOInf {
 
@@ -32,11 +33,14 @@ public class JPABlogAppDAO implements BlogPostDAOInf,UserDAOInf,CommentsDAOInf {
 			tx.commit();
 		} catch(Exception ex) {
 			System.out.println("Suresh,Caught excpetion:"+ex.toString());
-			// tx.rollback();
+			ex.printStackTrace();
+			tx.rollback();
+			throw ex;
+		} finally {
+			
 			em.close();
-			throw new Exception();
 		}
-		em.close();
+		
 
 	}
 

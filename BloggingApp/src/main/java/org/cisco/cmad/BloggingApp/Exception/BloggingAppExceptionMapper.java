@@ -10,7 +10,9 @@ import javax.ws.rs.ext.Provider;
 import org.cisco.cmad.BloggingApp.api.BlogPostNotFoundException;
 import org.cisco.cmad.BloggingApp.api.ErrorMsg;
 import org.cisco.cmad.BloggingApp.api.InvalidUserCredentialsException;
+import org.cisco.cmad.BloggingApp.api.UserAlreadyExistsException;
 import org.cisco.cmad.BloggingApp.api.UserNotFoundException;
+import org.cisco.cmad.BloggingApp.api.UserRegistrationFailedException;
 
 @Provider
 @SuppressWarnings("serial")
@@ -46,7 +48,18 @@ public class BloggingAppExceptionMapper implements ExceptionMapper<Throwable> {
 				errormsg.setErrormsg(exception.getMessage());
 				errormsg.setErrorcode(401);
 				return Response.status(Status.UNAUTHORIZED).entity(errormsg).build();
-			
+				
+		} else if(exception instanceof UserRegistrationFailedException) {
+				errormsg.setErrormsg(exception.getMessage());
+				errormsg.setErrorcode(503);
+				return Response.status(Status.SERVICE_UNAVAILABLE).entity(errormsg).build();
+				
+		} else if(exception instanceof UserAlreadyExistsException) {
+				
+				errormsg.setErrormsg(exception.getMessage());
+				errormsg.setErrorcode(409);
+				return Response.status(Status.CONFLICT).entity(errormsg).build();
+				
 		} else {
 				
 				System.out.println("Suresh: Caught exception Class:"+exception.getClass());

@@ -15,8 +15,13 @@ import org.cisco.cmad.BloggingApp.Rest.Errormsg;
 import org.cisco.cmad.BloggingApp.api.BlogPostNotFoundException;
 import org.cisco.cmad.BloggingApp.api.BlogUser;
 import org.cisco.cmad.BloggingApp.api.InvalidUserCredentialsException;
+import org.cisco.cmad.BloggingApp.api.UserAlreadyExistsException;
 import org.cisco.cmad.BloggingApp.api.UserDetails;
 import org.cisco.cmad.BloggingApp.api.UserNotFoundException;
+import org.cisco.cmad.BloggingApp.api.UserRegistrationFailedException;
+import org.glassfish.jersey.internal.util.ExceptionUtils;
+
+import com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException;
 
 public class CmadBlogUser implements BlogUser{
 
@@ -27,13 +32,29 @@ public class CmadBlogUser implements BlogUser{
 		
 		try {
 			userdao.createUser(user);
+			user.setPassword("xxx");
 		} catch (Exception ex) {
+			
 			System.out.println("Suresh,Caught Exception:"+ex.toString());
-			Errormsg msg = new Errormsg("USer "+user.getUserid()+" already exists");
+			
+			Throwable th = ex.getCause();
+										
+			while(th.getCause().getCause() != null)
+					th = th.getCause();			
+							
+			System.out.println("Suresh: root cause: "+th.getCause());
+			System.out.println("Suresh: message: "+th.getCause().getMessage());
+			
+			if(th.getCause() instanceof MySQLIntegrityConstraintViolationException || 
+			   th.getCause() instanceof com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException) {
+					throw new UserAlreadyExistsException("User "+user.getUserid()+" already exists");
+			} else {
+					throw new UserRegistrationFailedException("User registration Failed");
+			}		
 			
 		}	
 		
-	    user.setPassword("xxx");
+	    
 		
 	}
 
@@ -48,7 +69,7 @@ public class CmadBlogUser implements BlogUser{
 		if (userdb != null) {
 			
 			if ((user.getPassword().equals(userdb.getPassword()))) {
-				userdb.setPassword("xxxxxx");
+				userdb.setPassword("xxxxxxx");
 				return userdb;
 				
 			} else {

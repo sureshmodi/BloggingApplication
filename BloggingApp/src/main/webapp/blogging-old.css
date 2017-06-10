@@ -3,35 +3,13 @@ body{
 background-color:#eeeff3;
 text-align:center
 }
-
-.header img {
-  float: left;
-  width: 55px;
-  height: 55px;
-  background: #555;
-}
-
-.header h1 {
-  position: relative;
-  top: 18px;
-  left: 10px;
-}
-
-#blogheader
-{
-    text-align:center;
-}
-#headerdisplayposts, #headerlogin, #headerhome, #headercreatepost, #headerupdateprofile, #headerlogout
-{
-    display:inline;
-}
-
-/*
 #main{
 position:relative;
 margin-top:15px
 }
-
+img#logo{
+margin-top:50px
+}
 #first{
 width:308px;
 margin-top:0;
@@ -56,9 +34,6 @@ position:absolute;
 left:50%;
 margin-left:-180px;
 top:0
-}
-#blogheader, #blogdetails, #first, #second {
-  display:inline;
 }
 h3{
 margin-top:0
@@ -93,9 +68,3 @@ color:#6495ed
 p#two{
 margin-bottom:0
 }
-
-.inner
-{
-  display: inline-block;
-}
-*/
