@@ -11,6 +11,9 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
+import javax.persistence.Query;
+import javax.persistence.TypedQuery;
+import javax.persistence.criteria.CriteriaQuery;
 
 import org.cisco.cmad.BloggingApp.api.BlogPostEntity;
 import org.cisco.cmad.BloggingApp.api.Comments;
@@ -234,10 +237,35 @@ public class JPABlogAppDAO implements BlogPostDAOInf,UserDAOInf,CommentsDAOInf {
 		}
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
-	public List<BlogPostEntity> listallBlogPosts() {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Object[]> listallBlogPosts() {
+		
+		EntityManager em = null;
+		EntityTransaction tx = null;
+		List<Object[]> result = null;
+		
+		
+		try {
+			em = factory.createEntityManager();
+		    tx = em.getTransaction();
+		    tx.begin();
+		
+//		    CriteriaQuery<BlogPostEntity> criteria = em.getCriteriaBuilder().createQuery(BlogPostEntity.class);
+//		
+//		    criteria.select(criteria.from(BlogPostEntity.class));
+//		    
+//	   	    ListOfBlogPosts = em.createQuery(criteria).getResultList();
+		    
+		    Query query = em.createQuery("Select b.blogpostid, b.title FROM BlogPostEntity b");
+		    result = query.getResultList();
+		   		   
+		} finally {
+			em.close();
+		}
+		
+		 return result;
+		  			
 	}
 	
 	public Comments postComments(Comments comment,String blogid) {

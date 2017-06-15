@@ -19,9 +19,13 @@ import org.cisco.cmad.BloggingApp.api.UserAlreadyExistsException;
 import org.cisco.cmad.BloggingApp.api.UserDetails;
 import org.cisco.cmad.BloggingApp.api.UserNotFoundException;
 import org.cisco.cmad.BloggingApp.api.UserRegistrationFailedException;
+import org.cisco.cmad.BloggingApp.api.UserUpdateFailedException;
+import org.cisco.cmad.BloggingApp.jwt.JWTImpl;
 import org.glassfish.jersey.internal.util.ExceptionUtils;
 
 import com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException;
+
+import io.jsonwebtoken.SignatureException;
 
 public class CmadBlogUser implements BlogUser{
 
@@ -86,11 +90,24 @@ public class CmadBlogUser implements BlogUser{
 	}
 
 	@Override
-	public UserDetails updateUser(UserDetails user) {
+	public UserDetails updateUser(UserDetails user,String jwttoken) {
 		
-		UserDetails userdb = null;
-		userdb = userdao.updateProfile(user);
-		return userdb;
+		JWTImpl jwt = new JWTImpl();
+	
+		try {
+			jwt.parseJWT(jwttoken);
+			System.out.println("Token Authorization Successful");
+			UserDetails userdb = null;
+			userdb = userdao.updateProfile(user);
+			return userdb;
+		} catch (SignatureException e) {
+			e.printStackTrace();
+			throw new InvalidUserCredentialsException("Invalid Token");
+		
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new UserUpdateFailedException("Unauthorized User");
+		}
 				
 	}
 	

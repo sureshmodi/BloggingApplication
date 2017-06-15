@@ -10,14 +10,15 @@ import org.cisco.cmad.BloggingApp.api.BlogPostEntity;
 import org.cisco.cmad.BloggingApp.api.Comments;
 import org.cisco.cmad.BloggingApp.api.UserCredentials;
 import org.cisco.cmad.BloggingApp.api.UserDetails;
+import org.cisco.cmad.BloggingApp.jwt.JWTImpl;
 
 public class DBImpl {
 	
 		 
-	private static EntityManagerFactory factory = Persistence.createEntityManagerFactory("Blogging-App");
+	//private static EntityManagerFactory factory = Persistence.createEntityManagerFactory("Blogging-App");
 	public static void main(String[] args) { 
 		      
-			  DBImpl impl = new DBImpl();
+			 //DBImpl impl = new DBImpl();
 			  
 //			 impl.createBook("Hibernate in Action", 12347,"Joshua Bloch" , "2nd edition");
 //			 impl.createBook("JavaScript",12348,"Gavin King","4th edition");
@@ -35,6 +36,13 @@ public class DBImpl {
 			 //Vehicles vehicle = impl.retrieveVehicle("KA01MC1348");
 						    
 			 //impl.createUserdetails();
+			  
+			  JWTImpl jwttoken = new JWTImpl();
+			  
+			  String key = jwttoken.createJWT("Suresh","CMAD","Cisco",100000);
+			  System.out.println("Suresh: Generated Token: "+key);
+			  
+			  jwttoken.parseJWT(key);
 	}
 
 	public  void createBook(String title, int isbn, String author, String edition) {
@@ -46,13 +54,13 @@ public class DBImpl {
 //		book.setYearofpublish(new Date());
 //		book.setEdition_no(edition);
 		
-		EntityManager em = factory.createEntityManager();
-		EntityTransaction tx = em.getTransaction();
-		tx.begin();
-		
-		//em.persist(book);
-		tx.commit();
-		em.close();
+//		EntityManager em = factory.createEntityManager();
+//		EntityTransaction tx = em.getTransaction();
+//		tx.begin();
+//		
+//		//em.persist(book);
+//		tx.commit();
+//		em.close();
 				
 	}
 	

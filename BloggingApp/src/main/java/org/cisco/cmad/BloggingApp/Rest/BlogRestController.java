@@ -16,19 +16,24 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.GenericEntity;
+import javax.ws.rs.core.HttpHeaders;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.MultivaluedMap;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 import javax.ws.rs.core.UriInfo;
+import static javax.ws.rs.core.HttpHeaders.AUTHORIZATION;
 
 import org.cisco.cmad.BloggingApp.Database.JPABlogAppDAO;
 import org.cisco.cmad.BloggingApp.api.BlogPost;
 import org.cisco.cmad.BloggingApp.api.BlogPostEntity;
+import org.cisco.cmad.BloggingApp.api.BlogPostList;
 import org.cisco.cmad.BloggingApp.api.BlogUser;
 import org.cisco.cmad.BloggingApp.api.Comments;
 import org.cisco.cmad.BloggingApp.api.CommentsList;
 import org.cisco.cmad.BloggingApp.api.ErrorMsg;
 import org.cisco.cmad.BloggingApp.api.UserDetails;
+import org.cisco.cmad.BloggingApp.jwt.JWTImpl;
 import org.cisco.cmad.BloggingApp.service.CmadBlogPost;
 import org.cisco.cmad.BloggingApp.service.CmadBlogUser;
 
@@ -53,19 +58,19 @@ public class BlogRestController {
 	@POST
 	@Consumes({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
 	@Produces({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
-	@Path("/blogpost")
-	public Response createBlogpost(BlogPostEntity recvblogpost, @QueryParam("userid") String userid,
+	@Path("/blogpost/userid/{userid}")
+	public Response createBlogpost(BlogPostEntity recvblogpost, @PathParam("userid") String userid,
 								   @Context UriInfo uriinfo)
 	
 	{
-				System.out.println("Suresh: Absolute path: "+uriinfo.getAbsolutePath());
+				
 			    blogpost.createBlogpost(recvblogpost, userid);
 			    String id = String.valueOf(recvblogpost.getBlogpostid());
 			    URI uri = uriinfo.getAbsolutePathBuilder().path(id).build();
 			    
 			    recvblogpost.addLinks(uri, recvblogpost.getBlogpostid());
 				return Response.created(uri).entity(recvblogpost).build();
-			    //return Response.status(Status.CREATED).entity(recvblogpost).build();
+			    
 			   
 	
 	}
@@ -110,6 +115,7 @@ public class BlogRestController {
 			
 		UserDetails userdb = null;
 		ErrorMsg errormsg= new ErrorMsg();
+		//String authorization = "Authorization";
 		
 		if (user.getUserid()!=null && user.getPassword()!=null) {
 			userdb = bloguser.userLogin(user);
@@ -124,9 +130,14 @@ public class BlogRestController {
 									.build();
 						userdb.addLinks(uri,userdb.getBloglist().get(key).getBlogpostid());
 			}
-				       									
-			return Response.status(Status.OK).entity(userdb).build();
 			
+			JWTImpl jwttoken = new JWTImpl();
+			  
+			String token = jwttoken.createJWT(user.getUserid(),uriinfo.getAbsolutePath().toString(),user.getUserid(),1000000);
+			System.out.println("Suresh: Generated Token: "+token);
+				       									
+			return Response.status(Status.OK).entity(userdb).header(AUTHORIZATION,token).build();
+						
 		} else {
 			errormsg.setErrormsg("UserID/Password is empty");
 			errormsg.setErrorcode(400);
@@ -140,12 +151,20 @@ public class BlogRestController {
 	@Consumes({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
 	@Produces({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
 	@Path("/user/update")
-	
-	public Response updateUser(UserDetails user) {
+
+	public Response updateUser(UserDetails user,@Context HttpHeaders headers) {
 	
 		 	if (user != null) {
-		 		
-		 		UserDetails userdb = bloguser.updateUser(user);
+		 		 		 		  				
+		 		  MultivaluedMap<String,String> headervalues = headers.getRequestHeaders();
+		 		  
+		 		  System.out.println("Suresh: Authorization header value: "+headervalues.get(AUTHORIZATION).get(0));
+		 		  
+		 		  String jwttoken = headervalues.get(AUTHORIZATION).get(0);
+		 		  
+		 		  System.out.println("Suresh: Authorization header value: "+jwttoken);
+		 		 				 			  
+		 		  UserDetails userdb = bloguser.updateUser(user,jwttoken);
 				
 				if (userdb != null) {
 					return Response.status(Status.OK).entity(userdb).build();
@@ -190,6 +209,39 @@ public class BlogRestController {
 			} else {
 				return Response.status(Status.INTERNAL_SERVER_ERROR).entity("BlogPost not deleted").build();
 			}
+	}
+	
+	@GET
+	@Produces({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
+	@Path("/blogpost/all")
+	public Response getallBlogposts(@Context UriInfo uriinfo) {
+		
+		List<Object[]> dbbloglist = blogpost.getallBlogPosts();
+			
+		if(dbbloglist!=null) {
+			//URI uri = uriinfo.getAbsolutePathBuilder().path("comments").build();
+			//blog.addLinks(uri,"Blog Comments");
+			
+			BlogPostList bloglist = new BlogPostList();
+			//bloglist.setBloglist(dbbloglist);
+			
+			
+			for (int i=0;i<dbbloglist.size();i++) {
+				URI uri = uriinfo.getBaseUriBuilder().path(BlogRestController.class)
+							.path("blogpost")
+							.path((String) dbbloglist.get(i)[0])
+							.build();
+				
+				bloglist.addLinks((String) dbbloglist.get(i)[1],uri);
+			}	
+		
+			return Response.status(Status.FOUND).entity(bloglist).build();
+			
+		} else {
+			return Response.status(Status.NOT_FOUND).build();
+		}
+		
+		
 	}
 
 }

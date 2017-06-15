@@ -13,6 +13,7 @@ import org.cisco.cmad.BloggingApp.api.InvalidUserCredentialsException;
 import org.cisco.cmad.BloggingApp.api.UserAlreadyExistsException;
 import org.cisco.cmad.BloggingApp.api.UserNotFoundException;
 import org.cisco.cmad.BloggingApp.api.UserRegistrationFailedException;
+import org.cisco.cmad.BloggingApp.api.UserUpdateFailedException;
 
 @Provider
 @SuppressWarnings("serial")
@@ -59,6 +60,12 @@ public class BloggingAppExceptionMapper implements ExceptionMapper<Throwable> {
 				errormsg.setErrormsg(exception.getMessage());
 				errormsg.setErrorcode(409);
 				return Response.status(Status.CONFLICT).entity(errormsg).build();
+			
+		} else if(exception instanceof UserUpdateFailedException) {
+			
+			errormsg.setErrormsg(exception.getMessage());
+			errormsg.setErrorcode(304);
+			return Response.status(Status.NOT_MODIFIED).entity(errormsg).build();		
 				
 		} else {
 				

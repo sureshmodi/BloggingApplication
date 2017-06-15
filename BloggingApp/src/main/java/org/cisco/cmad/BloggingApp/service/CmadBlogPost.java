@@ -51,9 +51,12 @@ public class CmadBlogPost implements BlogPost {
 	}
 
 	@Override
-	public List<BlogPostEntity> getallBlogPosts() {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Object[]> getallBlogPosts() {
+		
+		List<Object[]> blogpostlist = blogdao.listallBlogPosts();
+		
+		return blogpostlist;
+					
 	}
 
 	@Override

@@ -10,7 +10,7 @@ public interface BlogPostDAOInf {
 	public void createBlogpost(BlogPostEntity blogpost,String userid);
     public boolean deleteBlogpost(String blogpostid);
     public BlogPostEntity retrieveBlogpost(String blogpostid);
-    public List<BlogPostEntity> listallBlogPosts();
+    public List<Object[]> listallBlogPosts();
 	       
 	
 }

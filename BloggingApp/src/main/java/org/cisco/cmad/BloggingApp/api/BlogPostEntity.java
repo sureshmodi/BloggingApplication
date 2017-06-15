@@ -39,7 +39,7 @@ public class BlogPostEntity {
 	private String title;
 	
 	@Lob
-	private String blogContent;
+	private String blogcontent;
 				
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="USER_ID")
@@ -92,11 +92,11 @@ public class BlogPostEntity {
 	}
 
 	public String getBlogContent() {
-		return blogContent;
+		return blogcontent;
 	}
 
 	public void setBlogContent(String blogContent) {
-		this.blogContent = blogContent;
+		this.blogcontent = blogContent;
 	}
 
 	public UserDetails getUser() {
