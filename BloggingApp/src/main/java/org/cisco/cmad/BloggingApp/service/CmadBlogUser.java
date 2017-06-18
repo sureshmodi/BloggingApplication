@@ -110,6 +110,23 @@ public class CmadBlogUser implements BlogUser{
 		}
 				
 	}
+
+	@Override
+	public UserDetails getUserDetails(String userid) {
+		
+		UserDetails userdb = null;
+				
+		userdb = userdao.retreiveUser(userid);
+		
+		if (userdb != null) {
+			
+			return userdb;
+						
+		} else {
+			System.out.println("Suresh: Uknown user");
+			throw new UserNotFoundException("Unknown User");
+		}
+	}
 	
 	
 }

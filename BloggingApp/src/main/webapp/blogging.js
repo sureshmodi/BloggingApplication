@@ -13,7 +13,6 @@ $(document).ready(function() {
 		};
 	   
 	    alert("sending ajax query...!!!!!!");
-		//$('#target').html('sending..');
 		$.ajax({
 			url : '/BloggingApp/webapi/blogging/user/login',
 			type : 'post',
@@ -22,14 +21,20 @@ $(document).ready(function() {
 			data : JSON.stringify(user),
 			success : function(data) {
 			    alert("You have successfully Logged in...!!!!!!");
-		        //$("#first").slideUp("slow");
+			    var userId = data.userid;
+			    if (localStorage) {
+			    	localStorage.setItem('userId', userId);
+			    } else {
+			    	alert("browser doesnot support local storage");
+			    }
+			    document.getElementById("useridstrong").innerHTML = userId;
 		        $("#headerlogin").hide();
 		        $("#headerhome").show();
 		        $("#headercreatepost").show();
 		        $("#headerupdateprofile").show();
 		        $("#headerlogout").show();
+		        $("#headeruser").show();
 		        $("#first").hide();
-		        //$("#second").hide();
 		        $("#bloglist").show();
 		        document.getElementById("loginform").reset();
 			},
@@ -46,8 +51,7 @@ $(document).ready(function() {
 			      alert('bad request');
 			      document.getElementById("loginform").reset();
 			    }
-		    }
-		    
+		    }		    
 		});
     }
   });
@@ -85,7 +89,6 @@ $(document).ready(function() {
 			data : JSON.stringify(registeruser),
 			success : function(data) {
 		      alert("You have successfully Sign Up, Now you can login...!!!!!!");
-		      //$('#target').html(data.msg);
 		      $("#form")[0].reset();
 		      $("#second").slideUp("slow", function() {
 		        $("#first").slideDown("slow");
@@ -128,6 +131,7 @@ $(document).ready(function() {
   $('#createpost').click(function(){
 	  $('#bloglist').hide();
 	  $('#displayblogpost').hide();
+  	  document.getElementById("createpostform").reset();
 	  $('#createblogpost').show();
   });
 
@@ -143,17 +147,49 @@ $(document).ready(function() {
   $("#headerloginform").click(function(){
 	  $("#bloglist").hide();
 	  $("#displayblogpost").hide();
-	  //$('#createblogpost').hide();
-	  //Using GET method get the details
-	  //Display user details
 	  $("#second").hide();
 	  $("#first").show();
   });
 
   
   $("#createblogpostsubmit").click(function() {
-	  $('#createblogpost').hide();
-	  alert("Post created successfully!!!");
+	  $('#createblogpost').hide();	  
+	    if ($("#createblogposttitle").val() == '' || $("#createblogpostcontent").val() == '' || $("#createblogpostid").val() == '') {
+	      alert("Please fill all fields...!!!!!!");
+	    } else {
+			var posttitle = $("#createblogposttitle").val();
+			var postcontent = $("#createblogpostcontent").val();
+			var postid = $("#createblogpostid").val();
+			userid = localStorage.getItem('userId');
+			alert(userid);
+			var createpost = {
+			  "blogpostid" : postid,
+			  "title" : posttitle,
+			  "blogContent" : postcontent
+			};
+		   
+		    alert("sending ajax query...!!!!!!");
+			$.ajax({
+				url : '/BloggingApp/webapi/blogging/blogpost/userid/' + userid,
+				//url : '/BloggingApp/webapi/blogging/blogpost?userid=' + userid,
+				type : 'post',
+				dataType : 'json',
+				contentType: "application/json; charset=utf-8",
+				data : JSON.stringify(createpost),
+				success : function(data) {
+				    alert("Successfull created the blogpost...!!!!!!");
+				    alert(data);
+				    var blogTable = $('#bloglisttable tbody');
+				    blogTable.append('<tr><td>' + data.title + '</td><td>' + data.links[0].uri +'</td></tr>');
+				},
+			    statusCode: {
+	   	            500: function() {
+				      alert('Internal server code error');
+				      document.getElementById("loginform").reset();
+				    }
+			    }		    
+			});
+	    }
 	  $('#bloglist').show();
   });
   
@@ -163,8 +199,32 @@ $(document).ready(function() {
 	  $('#first').hide();
 	  $('#second').hide();
 	  $('#bloglist').hide();
-	  //$("#displayposts").hide();
-	  alert("Fetched all posts successfully!!!");
+
+	    alert("sending ajax query...!!!!!!");
+		$.ajax({
+			url : '/BloggingApp/webapi/blogging/blogpost/all',
+			type : 'get',
+			dataType : 'json',
+			contentType: "application/json; charset=utf-8",
+			//data,	  
+			success : function(data) {
+     		    alert("Fetched all user posts successfully!!!");
+			    alert(data);
+			    var blogTable = $('#bloglisttable tbody');
+			    
+			    for (i = 0; i < data.links.length; i++) {
+				    blogTable.append('<tr><td>' + data.links[i].reference + '</td><td>' + data.links[i].uri +'</td></tr>');
+			    }			      
+			},
+		    statusCode: {
+   	            500: function() {
+			      alert('Internal server code error');
+			    }
+		    }
+		});
+
+	  
+
 	  $('#bloglist').show();
   });
 
@@ -174,7 +234,30 @@ $(document).ready(function() {
 	  $('#first').hide();
 	  $('#second').hide();
 	  $('#bloglist').hide();
-	  alert("Fetched all posts successfully!!!");
+	  
+	    alert("sending ajax query...!!!!!!");
+		$.ajax({
+			url : '/BloggingApp/webapi/blogging/blogpost/all',
+			type : 'get',
+			dataType : 'json',
+			contentType: "application/json; charset=utf-8",
+			//data,	  
+			success : function(data) {
+				alert("Fetched all posts successfully!!!");
+			    alert(data);
+			    var blogTable = $('#bloglisttable tbody');
+			    
+			    for (i = 0; i < data.links.length; i++) {
+				    blogTable.append('<tr><td>' + data.links[i].reference + '</td><td>' + data.links[i].uri +'</td></tr>');
+			    }			      
+			},
+		    statusCode: {
+   	            500: function() {
+			      alert('Internal server code error');
+			    }
+		    }
+		});
+		    		    
 	  $('#bloglist').show();
   });
 
@@ -194,7 +277,6 @@ $(document).ready(function() {
 
   $('#logout').click(function(){
 	  alert("Succesfully logged out !!!");
-	  //$('#blogheader').hide();
 	  $('#bloglist').hide();
 	  $('#createblogpost').hide();
 	  $('#displayblogpost').hide();
@@ -203,6 +285,7 @@ $(document).ready(function() {
       $("#headerlogin").show();
       $("#headerlogout").hide();
       $("#headerupdateprofile").hide();
+      $("#headeruser").hide();
 	  $('#first').show();
   });
   

@@ -66,7 +66,10 @@ public class BlogRestController {
 				
 			    blogpost.createBlogpost(recvblogpost, userid);
 			    String id = String.valueOf(recvblogpost.getBlogpostid());
-			    URI uri = uriinfo.getAbsolutePathBuilder().path(id).build();
+			    //URI uri = uriinfo.getAbsolutePathBuilder().path(id).build();
+			    URI uri = uriinfo.getBaseUriBuilder()
+			    		  .path(BlogRestController.class)
+			    		  .path("blogpost").path(id).build();
 			    
 			    recvblogpost.addLinks(uri, recvblogpost.getBlogpostid());
 				return Response.created(uri).entity(recvblogpost).build();
@@ -97,7 +100,7 @@ public class BlogRestController {
 		if(blog!=null) {
 			URI uri = uriinfo.getAbsolutePathBuilder().path("comments").build();
 			blog.addLinks(uri,"Blog Comments");
-			return Response.status(Status.FOUND).entity(blog).build();
+			return Response.status(Status.OK).entity(blog).build();
 			
 		} else {
 			return Response.status(Status.NOT_FOUND).build();
@@ -119,10 +122,9 @@ public class BlogRestController {
 		
 		if (user.getUserid()!=null && user.getPassword()!=null) {
 			userdb = bloguser.userLogin(user);
-		
-			
+					
 			Set<String> keys = userdb.getBloglist().keySet();
-							
+													
 			for (String key: keys) {
 						URI uri = uriinfo.getBaseUriBuilder().path(BlogRestController.class)
 									.path("blogpost")
@@ -235,7 +237,7 @@ public class BlogRestController {
 				bloglist.addLinks((String) dbbloglist.get(i)[1],uri);
 			}	
 		
-			return Response.status(Status.FOUND).entity(bloglist).build();
+			return Response.status(Status.OK).entity(bloglist).build();
 			
 		} else {
 			return Response.status(Status.NOT_FOUND).build();
@@ -244,4 +246,38 @@ public class BlogRestController {
 		
 	}
 
+	@GET
+	@Consumes({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
+	@Produces({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
+
+	@Path("/user/{userid}/home")
+	public Response userDetails(@PathParam("userid") String userid,@Context UriInfo uriinfo) {
+			
+		UserDetails userdb = null;
+		ErrorMsg errormsg= new ErrorMsg();
+				
+		if (userid!=null) {
+			userdb = bloguser.getUserDetails(userid);
+					
+			Set<String> keys = userdb.getBloglist().keySet();
+													
+			for (String key: keys) {
+						URI uri = uriinfo.getBaseUriBuilder().path(BlogRestController.class)
+									.path("blogpost")
+									.path(userdb.getBloglist().get(key).getBlogpostid())
+									.build();
+						userdb.addLinks(uri,userdb.getBloglist().get(key).getBlogpostid());
+			}
+			
+			return Response.status(Status.OK).entity(userdb).build();
+						
+		} else {
+			errormsg.setErrormsg("UserID is empty");
+			errormsg.setErrorcode(400);
+			return Response.status(Status.BAD_REQUEST).entity(errormsg).build();	
+		}
+							   
+	
+	}
+	
 }
