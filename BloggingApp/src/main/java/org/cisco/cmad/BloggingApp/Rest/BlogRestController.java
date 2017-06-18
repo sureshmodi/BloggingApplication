@@ -120,6 +120,10 @@ public class BlogRestController {
 		ErrorMsg errormsg= new ErrorMsg();
 		//String authorization = "Authorization";
 		
+		System.out.println("Suresh: Username: "+user.getUserid());
+		System.out.println("Suresh: Username: "+user.getUserid());
+	
+		
 		if (user.getUserid()!=null && user.getPassword()!=null) {
 			userdb = bloguser.userLogin(user);
 					
@@ -141,6 +145,7 @@ public class BlogRestController {
 			return Response.status(Status.OK).entity(userdb).header(AUTHORIZATION,token).build();
 						
 		} else {
+			System.out.println("Suresh: Inside userlogin method");
 			errormsg.setErrormsg("UserID/Password is empty");
 			errormsg.setErrorcode(400);
 			return Response.status(Status.BAD_REQUEST).entity(errormsg).build();	
@@ -268,7 +273,7 @@ public class BlogRestController {
 									.build();
 						userdb.addLinks(uri,userdb.getBloglist().get(key).getBlogpostid());
 			}
-			
+						
 			return Response.status(Status.OK).entity(userdb).build();
 						
 		} else {

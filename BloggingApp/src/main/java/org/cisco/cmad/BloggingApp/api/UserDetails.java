@@ -53,7 +53,6 @@ public class UserDetails {
 	private String userid;
 	
 	@Column(name="PASSWORD")
-	@XmlTransient
 	private String password;
 		
 	@Transient

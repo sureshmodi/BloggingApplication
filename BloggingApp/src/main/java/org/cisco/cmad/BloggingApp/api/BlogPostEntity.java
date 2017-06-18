@@ -148,6 +148,5 @@ public class BlogPostEntity {
 		this.comments_count = comments_count;
 	}
 	
-	
 
 }
