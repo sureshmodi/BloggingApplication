@@ -45,6 +45,8 @@ public class BlogPostEntity {
 	@JoinColumn(name="USER_ID")
 	@XmlTransient
 	private UserDetails user;
+		
+	private String author;
 	
 	private Date datecreated=new Date();
 		
@@ -148,5 +150,12 @@ public class BlogPostEntity {
 		this.comments_count = comments_count;
 	}
 	
+	public String getAuthor() {
+		return author;
+	}
 
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+	
 }

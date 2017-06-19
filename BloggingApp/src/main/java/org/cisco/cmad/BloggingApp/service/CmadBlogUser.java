@@ -95,7 +95,7 @@ public class CmadBlogUser implements BlogUser{
 		JWTImpl jwt = new JWTImpl();
 	
 		try {
-			jwt.parseJWT(jwttoken);
+			jwt.parseJWT(user.getUserid(),jwttoken);
 			System.out.println("Token Authorization Successful");
 			UserDetails userdb = null;
 			userdb = userdao.updateProfile(user);

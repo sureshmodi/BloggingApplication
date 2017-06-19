@@ -37,6 +37,13 @@ $(document).ready(function() {
 		        $("#first").hide();
 		        $("#bloglist").show();
 		        document.getElementById("loginform").reset();
+		        
+			    var blogTable = $('#bloglisttable tbody');
+			    
+			    for (i = 0; i < data.links.length; i++) {
+				    blogTable.append('<tr><td>' + data.links[i].reference + '</td><td>' + data.links[i].uri +'</td></tr>');
+			    }			      
+
 			},
 		    statusCode: {
 		        401: function() {
@@ -150,8 +157,14 @@ $(document).ready(function() {
 	  $("#second").hide();
 	  $("#first").show();
   });
-
-  
+/*
+  $("a").click(function(event) {
+      alert("As you can see, the link no longer took you to blogging uri");
+      var href = $(this).attr('href');
+      alert(href);
+      event.preventDefault();
+  });
+  */
   $("#createblogpostsubmit").click(function() {
 	  $('#createblogpost').hide();	  
 	    if ($("#createblogposttitle").val() == '' || $("#createblogpostcontent").val() == '' || $("#createblogpostid").val() == '') {
@@ -171,7 +184,6 @@ $(document).ready(function() {
 		    alert("sending ajax query...!!!!!!");
 			$.ajax({
 				url : '/BloggingApp/webapi/blogging/blogpost/userid/' + userid,
-				//url : '/BloggingApp/webapi/blogging/blogpost?userid=' + userid,
 				type : 'post',
 				dataType : 'json',
 				contentType: "application/json; charset=utf-8",
@@ -180,7 +192,11 @@ $(document).ready(function() {
 				    alert("Successfull created the blogpost...!!!!!!");
 				    alert(data);
 				    var blogTable = $('#bloglisttable tbody');
-				    blogTable.append('<tr><td>' + data.title + '</td><td>' + data.links[0].uri +'</td></tr>');
+				    
+				    blogTable.append('<tr><td>' + data.title + '</td><td> <a href="' + data.links[0].uri + '" class="blogpostdetails"> Show Details </a></td></tr>');
+				    
+				    /*working*/
+				    //blogTable.append('<tr><td>' + data.title + '</td><td> <input class="blogpostdetails" type="button" value="Show Details"></td></tr>');
 				},
 			    statusCode: {
 	   	            500: function() {
@@ -200,20 +216,21 @@ $(document).ready(function() {
 	  $('#second').hide();
 	  $('#bloglist').hide();
 
+	    $('#bloglisttable tbody').empty();
 	    alert("sending ajax query...!!!!!!");
 		$.ajax({
 			url : '/BloggingApp/webapi/blogging/blogpost/all',
-			type : 'get',
+			type : 'GET',
 			dataType : 'json',
-			contentType: "application/json; charset=utf-8",
-			//data,	  
+			contentType: "application/json; charset=utf-8",	  			
 			success : function(data) {
      		    alert("Fetched all user posts successfully!!!");
 			    alert(data);
 			    var blogTable = $('#bloglisttable tbody');
 			    
 			    for (i = 0; i < data.links.length; i++) {
-				    blogTable.append('<tr><td>' + data.links[i].reference + '</td><td>' + data.links[i].uri +'</td></tr>');
+			    	blogTable.append('<tr><td>' + data.links[i].reference + '</td><td> <a href="' + data.links[i].uri + '" class="blogpostdetails"> Show Details </a></td></tr>');
+				    //blogTable.append('<tr><td>' + data.links[i].reference + '</td><td>' + data.links[i].uri +'</td></tr>');
 			    }			      
 			},
 		    statusCode: {
@@ -221,9 +238,7 @@ $(document).ready(function() {
 			      alert('Internal server code error');
 			    }
 		    }
-		});
-
-	  
+		});	  
 
 	  $('#bloglist').show();
   });
@@ -234,21 +249,22 @@ $(document).ready(function() {
 	  $('#first').hide();
 	  $('#second').hide();
 	  $('#bloglist').hide();
-	  
-	    alert("sending ajax query...!!!!!!");
+
+	    alert("sending ajax query...!!!");
+	    $('#bloglisttable tbody').empty();
 		$.ajax({
 			url : '/BloggingApp/webapi/blogging/blogpost/all',
 			type : 'get',
 			dataType : 'json',
-			contentType: "application/json; charset=utf-8",
-			//data,	  
+			contentType: "application/json; charset=utf-8",	  
 			success : function(data) {
 				alert("Fetched all posts successfully!!!");
 			    alert(data);
 			    var blogTable = $('#bloglisttable tbody');
 			    
 			    for (i = 0; i < data.links.length; i++) {
-				    blogTable.append('<tr><td>' + data.links[i].reference + '</td><td>' + data.links[i].uri +'</td></tr>');
+			    	blogTable.append('<tr><td>' + data.links[i].reference + '</td><td> <a href="' + data.links[i].uri + '" class="blogpostdetails"> Show Details </a></td></tr>');
+				    //blogTable.append('<tr><td>' + data.links[i].reference + '</td><td>' + data.links[i].uri +'</td></tr>');
 			    }			      
 			},
 		    statusCode: {
@@ -256,17 +272,22 @@ $(document).ready(function() {
 			      alert('Internal server code error');
 			    }
 		    }
-		});
+		});		
 		    		    
 	  $('#bloglist').show();
   });
 
 
-  $('#blogpostdetails').click(function(){
-	  $('#bloglist').hide();
-	  alert("Fetched blog post details successfully!!!");
-	  $('#displayblogpost').show();
-  });
+  $("#bloglisttable").on('click', '.blogpostdetails', function(event) {
+	    alert("Caught dynamic row element !!!");
+        var href = $(this).attr('href');
+	    alert(href);
+	    event.preventDefault();
+
+		$('#bloglist').hide();
+	    alert("row" + $(this).closest('table').index() + "Data Submitted" );
+		$('#displayblogpost').show();
+	});
   
   $('#blogpostdelete').click(function(){
 	  $('#bloglist').hide();

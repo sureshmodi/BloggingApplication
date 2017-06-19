@@ -98,7 +98,7 @@ public class BlogRestController {
 		BlogPostEntity blog = blogpost.getBlogpost(blogpostid);
 			
 		if(blog!=null) {
-			URI uri = uriinfo.getAbsolutePathBuilder().path("comments").build();
+			URI uri = uriinfo.getAbsolutePathBuilder().build();
 			blog.addLinks(uri,"Blog Comments");
 			return Response.status(Status.OK).entity(blog).build();
 			
@@ -119,11 +119,7 @@ public class BlogRestController {
 		UserDetails userdb = null;
 		ErrorMsg errormsg= new ErrorMsg();
 		//String authorization = "Authorization";
-		
-		System.out.println("Suresh: Username: "+user.getUserid());
-		System.out.println("Suresh: Username: "+user.getUserid());
-	
-		
+				
 		if (user.getUserid()!=null && user.getPassword()!=null) {
 			userdb = bloguser.userLogin(user);
 					

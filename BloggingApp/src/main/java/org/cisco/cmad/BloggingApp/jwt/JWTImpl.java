@@ -2,6 +2,8 @@ package org.cisco.cmad.BloggingApp.jwt;
 
 import java.security.Key;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.crypto.spec.SecretKeySpec;
 import javax.xml.bind.DatatypeConverter;
@@ -18,8 +20,11 @@ import io.jsonwebtoken.*;
 
 public class JWTImpl {
 	
-	private static final Key signingKey = MacProvider.generateKey();
-	private static final Key signingKey1 = MacProvider.generateKey();
+	//private static final Key signingKey = MacProvider.generateKey();
+	//private static final Key signingKey1 = MacProvider.generateKey();
+	
+	private Key signingKey;
+	private static Map<String, Key> userkeys = new HashMap<>();
 
 	public JWTImpl() {
 		
@@ -44,6 +49,9 @@ public class JWTImpl {
 	    //byte[] apiKeySecretBytes = DatatypeConverter.parseBase64Binary("secretkey");
 	    //Key signingKey = new SecretKeySpec(apiKeySecretBytes, signatureAlgorithm.getJcaName());
 	        
+	    signingKey = MacProvider.generateKey();
+	    
+	    userkeys.put(id, signingKey);
 	    
 	    System.out.println("Suresh: Algorithm"+signingKey.getAlgorithm()); 
 	    System.out.println("Suresh: Format: "+signingKey.getFormat());
@@ -71,9 +79,11 @@ public class JWTImpl {
 	}
 	
 	//Sample method to validate and read the JWT
-	public void parseJWT(String jwttoken) {
+	public void parseJWT(String userid,String jwttoken) {
 	 
 	    //This line will throw an exception if it is not a signed JWS (as expected)
+		
+		signingKey = userkeys.get(userid);
 	    Claims claims = Jwts.parser()         
 	       .setSigningKey(signingKey)
 	       .parseClaimsJws(jwttoken).getBody();
@@ -84,7 +94,7 @@ public class JWTImpl {
 	    System.out.println("Expiration: " + claims.getExpiration());
 	    
 	    if (!(Jwts.parser().setSigningKey(signingKey).parseClaimsJws(jwttoken).getBody()
-	    		.getSubject().equals("vihaanmodi"))) {
+	    		.getSubject().equals(userid))) {
 	    	
 	    	throw new InvalidUserCredentialsException("Unauthorized User");
 	    		
