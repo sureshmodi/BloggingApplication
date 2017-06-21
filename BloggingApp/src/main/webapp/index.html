@@ -25,11 +25,13 @@
     <input id="headerloginform" type="button" value="Log In">
   </div>
   <div id="headercreatepost" style="display:none;">
-    <a href="#" id="createpost"><strong>Create Post</strong></a>
+  <!-- <div id="headercreatepost" "> -->   
+    <!-- <a href="#" id="createpost"><strong>Create Post</strong></a> -->
+    <input id="createpost" type="button" value="Create Post">
   </div>
   <div id="headeruser" style="display:none;"> <span id="useidspan">Signed in as: <strong id="useridstrong">USER</strong></span></div>
   <div id="headerupdateprofile" style="display:none;">
-    <input id="updateprofile" type="button" value="Update Profile">
+    <input id="headerupdateprofileform" type="button" value="Update Profile">
   </div>
   <div id="headerlogout" style="display:none;">
     <input id="logout" type="button" value="Log Out">
@@ -65,6 +67,30 @@
   </form>
 </div>
 
+ <!-- Update profile form -->
+ <div data-role="page" id="updateprofile" style="display:none;">
+        <div data-role="header">
+            <h1>Update User Profile</h1>
+        </div>
+        <div data-role="content">
+            <div data-role="content">
+                <form id="updateprofileform">
+                    <div data-role="fieldcontain">
+                       <label for="updateprofilename"><strong>Full Name    : </strong></label>
+                       <input id="updateprofilename" placeholder="Full Name" type="text" size="25"> <br />
+                       <label for="updateprofilecontact"><strong>Contact Number: </strong></label>
+                       <input id="updateprofilecontact" placeholder="Contact Number" type="text" size="25"> <br />
+                       <label for="updateprofileregisteremail"><strong>Email       : </strong></label>
+                       <input id="updateprofileregisteremail" placeholder="Email" type="text" size="25"> <br />
+                       <label for="updateprofileaddress"><strong>Address       : </strong></label>
+                       <input id="updateprofileaddress" placeholder="Address" type="text" size="25"> <br />
+                       <input id="updateprofilesubmit" type="button" value="Submit">                                                                
+                    </div>
+                </form>
+            </div>
+        </div>
+ </div>
+
  <!-- createNewPostPage -->
  <div data-role="page" id="createblogpost" style="display:none;">
         <div data-role="header">
@@ -79,7 +105,7 @@
                         <label for="postTitle"><strong>Post Title: </strong></label>
                         <input type="text" name="postTitle" id="createblogposttitle" size="52" value=""/> <br /> <br />
                         <label for="postContent"><strong>Post Content:</strong></label>
-                        <textarea cols="50" rows="15" maxlength="2500" name="postContent" id="createblogpostcontent"></textarea> <br />
+                        <textarea cols="50" rows="15" maxlength="250000" name="postContent" id="createblogpostcontent"></textarea> <br />
                         <input id="createblogpostsubmit" type="button" value="Submit Post">
                     </div>
                 </form>
@@ -87,13 +113,39 @@
         </div>
  </div>
 
+
 <!-- Display particular blog post -->
-<div id="displayblogpost" style="display:none;">
-  <p> Title: </p>
-  <p> This is the title </p>
-  <p> Details: </p>
-  <p> Theses are the Blog post details </p>
+<div data-role="page" id="displayblogpost" style="display:none;">
+    <div class="span-24">
+        <h2>Blog post details</h2>
+        <div id="blogpost">
+        </div>
+    </div>    
+    <div class="span-24">
+        <div id="blogshowcomments" style="display:none;">
+        </div>
+    </div>
+    
 </div>
+
+<!-- createNewCommentPage -->
+ <div data-role="page" id="createblogcomment" style="display:none;">
+        <div data-role="header">
+            <h1>Create New Comment</h1>
+        </div>
+        <div data-role="content">
+            <div data-role="content">
+                <form id="createcommentform">
+                    <div data-role="fieldcontain">
+                        <label for="postComment"><strong>Comment:</strong></label>
+                        <textarea cols="50" rows="15" maxlength="2500" name="postComment" id="createblogcommentcontent"></textarea> <br />
+                        <input id="createblogcommentsubmit" type="button" value="Submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+ </div>
+
 
 <div id="bloglist" style="display:none;">
 <p> Blog post details </p>
@@ -107,6 +159,9 @@
   <tbody></tbody>
 </table>
 </div>
+
+
+
 </div>
 </body>
 </html>

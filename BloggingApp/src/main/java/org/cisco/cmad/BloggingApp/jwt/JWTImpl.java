@@ -100,5 +100,12 @@ public class JWTImpl {
 	    		
 	    }
 	}
+
+	public void deleteKey(String userid) {
+		
+		userkeys.remove(userid);
+		System.out.print("User logged out Successfully");
+	
+	}
 	
 }

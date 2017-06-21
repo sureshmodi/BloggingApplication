@@ -32,10 +32,13 @@ import org.cisco.cmad.BloggingApp.api.BlogUser;
 import org.cisco.cmad.BloggingApp.api.Comments;
 import org.cisco.cmad.BloggingApp.api.CommentsList;
 import org.cisco.cmad.BloggingApp.api.ErrorMsg;
+import org.cisco.cmad.BloggingApp.api.InvalidUserCredentialsException;
 import org.cisco.cmad.BloggingApp.api.UserDetails;
 import org.cisco.cmad.BloggingApp.jwt.JWTImpl;
 import org.cisco.cmad.BloggingApp.service.CmadBlogPost;
 import org.cisco.cmad.BloggingApp.service.CmadBlogUser;
+
+import io.jsonwebtoken.SignatureException;
 
 @Path("blogging")
 public class BlogRestController {
@@ -60,10 +63,28 @@ public class BlogRestController {
 	@Produces({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
 	@Path("/blogpost/userid/{userid}")
 	public Response createBlogpost(BlogPostEntity recvblogpost, @PathParam("userid") String userid,
-								   @Context UriInfo uriinfo)
+								   @Context UriInfo uriinfo,@Context HttpHeaders headers)
 	
 	{
+				MultivaluedMap<String,String> headervalues = headers.getRequestHeaders();
+				String jwttoken = null;
 				
+				try {
+					jwttoken = headervalues.get(AUTHORIZATION).get(0);
+				} catch (NullPointerException e) {
+					throw new InvalidUserCredentialsException("User Not Authorized");
+				} 	
+		  	  		
+				System.out.println("Suresh: Authorization header value: "+jwttoken);
+				JWTImpl validate = new JWTImpl();
+				
+				try {
+					validate.parseJWT(userid, jwttoken);
+				} catch (SignatureException e) {
+					e.printStackTrace();
+					throw new InvalidUserCredentialsException("User Not Authorized");
+				}
+								
 			    blogpost.createBlogpost(recvblogpost, userid);
 			    String id = String.valueOf(recvblogpost.getBlogpostid());
 			    //URI uri = uriinfo.getAbsolutePathBuilder().path(id).build();
@@ -73,8 +94,6 @@ public class BlogRestController {
 			    
 			    recvblogpost.addLinks(uri, recvblogpost.getBlogpostid());
 				return Response.created(uri).entity(recvblogpost).build();
-			    
-			   
 	
 	}
 	
@@ -160,13 +179,11 @@ public class BlogRestController {
 		 	if (user != null) {
 		 		 		 		  				
 		 		  MultivaluedMap<String,String> headervalues = headers.getRequestHeaders();
-		 		  
-		 		  System.out.println("Suresh: Authorization header value: "+headervalues.get(AUTHORIZATION).get(0));
-		 		  
+		 		  	 		  	 		  
 		 		  String jwttoken = headervalues.get(AUTHORIZATION).get(0);
 		 		  
 		 		  System.out.println("Suresh: Authorization header value: "+jwttoken);
-		 		 				 			  
+		 		  		 		  	 		 				 			  
 		 		  UserDetails userdb = bloguser.updateUser(user,jwttoken);
 				
 				if (userdb != null) {
@@ -280,5 +297,39 @@ public class BlogRestController {
 							   
 	
 	}
+	
+	@POST
+	//@Consumes({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
+	@Produces(MediaType.TEXT_PLAIN)
+
+	@Path("/user/{userid}/logout")
+	public Response userLogout(@PathParam("userid") String userid, @Context UriInfo uriinfo) {
+			
+		ErrorMsg errormsg= new ErrorMsg();
+		//String authorization = "Authorization";
+				
+		if (userid!=null) {
+			try {
+				JWTImpl jwttoken = new JWTImpl();
+				jwttoken.deleteKey(userid);
+				return Response.status(Status.OK).entity("User Successfully logged out").build();
+			} catch (Exception e) {
+				e.printStackTrace();
+				System.out.println("Caught Exception:"+e.toString());
+				return Response.status(Status.OK).entity("User Successfully logged out").build();
+			}	
+						
+		} else {
+			System.out.println("Suresh: Inside userlogout method");
+			/*errormsg.setErrormsg("UserID is empty");
+			errormsg.setErrorcode(400);
+			return Response.status(Status.BAD_REQUEST).entity(errormsg).build();	*/
+			return Response.status(Status.BAD_REQUEST).entity("Bad Request").build();
+			
+		}
+							   
+	
+	}
+	
 	
 }

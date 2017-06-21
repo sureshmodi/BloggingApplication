@@ -93,13 +93,13 @@ public class BlogPostEntity {
 		this.title = title;
 	}
 
-	public String getBlogContent() {
+	/*public String getBlogContent() {
 		return blogcontent;
 	}
 
 	public void setBlogContent(String blogContent) {
 		this.blogcontent = blogContent;
-	}
+	}*/
 
 	public UserDetails getUser() {
 		return user;
@@ -156,6 +156,14 @@ public class BlogPostEntity {
 
 	public void setAuthor(String author) {
 		this.author = author;
+	}
+	
+	public String getBlogcontent() {
+		return blogcontent;
+	}
+
+	public void setBlogcontent(String blogcontent) {
+		this.blogcontent = blogcontent;
 	}
 	
 }
