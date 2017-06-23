@@ -70,7 +70,7 @@ public class BlogRestController {
 								   @Context UriInfo uriinfo,@Context HttpHeaders headers)
 	
 	{
-				MultivaluedMap<String,String> headervalues = headers.getRequestHeaders();
+				/*MultivaluedMap<String,String> headervalues = headers.getRequestHeaders();
 				String jwttoken = null;
 				
 				try {
@@ -87,7 +87,7 @@ public class BlogRestController {
 				} catch (SignatureException e) {
 					e.printStackTrace();
 					throw new InvalidUserCredentialsException("User Not Authorized");
-				}
+				}*/
 								
 			    blogpost.createBlogpost(recvblogpost, userid);
 			    String id = String.valueOf(recvblogpost.getBlogpostid());
