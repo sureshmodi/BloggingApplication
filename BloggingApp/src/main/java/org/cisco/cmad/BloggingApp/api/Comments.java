@@ -27,7 +27,7 @@ public class Comments {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@XmlTransient
-	private long commentid;
+	private String commentid;
 	private String comment;
 		
 	@Column(name="author")
@@ -53,10 +53,10 @@ public class Comments {
 //		this.commentdate = new Date();
 //	}
 	
-	public long getCommentid() {
+	public String getCommentid() {
 		return commentid;
 	}
-	public void setCommentid(long commentid) {
+	public void setCommentid(String commentid) {
 		this.commentid = commentid;
 	}
 	public String getComment() {

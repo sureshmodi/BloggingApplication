@@ -52,8 +52,12 @@ public class BlogRestController {
 	@Path("/user/register")
 	public Response addUser(UserDetails user) {
 			
+			if(user != null && user.getUserid() != null && !((user.getUserid().contentEquals("")))) {
 				bloguser.createUser(user);
 				return Response.status(Status.CREATED).entity(user).build();
+			}	else {
+				throw new InvalidUserCredentialsException("Missing mandatory user details");
+			}
 			   
 	
 	}

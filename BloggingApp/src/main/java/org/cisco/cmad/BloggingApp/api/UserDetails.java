@@ -97,17 +97,17 @@ public class UserDetails {
 		
 	}
 	
-//	public UserDetails(String emailid, String fullname, String address, long mobileno,
-//					   String userid, String password ) {
-//		
-//		this.emailid=emailid;
-//		this.fullname=fullname;
-//		this.address=address;
-//		this.mobileno=mobileno;
-//		this.reg_date=new Date();
-//		this.userid=userid;
-//		this.password=password;
-//	}
+	public UserDetails(String emailid, String fullname, String address, long mobileno,
+					   String userid, String password ) {
+		
+		this.emailid=emailid;
+		this.fullname=fullname;
+		this.address=address;
+		this.mobileno=mobileno;
+		this.reg_date=new Date();
+		this.userid=userid;
+		this.password=password;
+	}
 
 	public String getEmailid() {
 		return emailid;
