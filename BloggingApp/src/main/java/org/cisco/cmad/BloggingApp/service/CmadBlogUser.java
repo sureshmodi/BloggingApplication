@@ -90,12 +90,10 @@ public class CmadBlogUser implements BlogUser{
 	}
 
 	@Override
-	public UserDetails updateUser(UserDetails user,String jwttoken) {
+	public UserDetails updateUser(UserDetails user) {
 		
-		JWTImpl jwt = new JWTImpl();
-	
 		try {
-			jwt.parseJWT(user.getUserid(),jwttoken);
+			
 			System.out.println("Token Authorization Successful");
 			UserDetails userdb = null;
 			userdb = userdao.updateProfile(user);

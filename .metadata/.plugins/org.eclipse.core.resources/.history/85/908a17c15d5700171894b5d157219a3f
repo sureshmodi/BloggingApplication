@@ -1,0 +1,29 @@
+package org.cisco.cmad.BloggingApp;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class BlogUserTest {
+
+	@Test
+	public void testCreateUser() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testUserLogin() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testUpdateUser() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testGetUserDetails() {
+		fail("Not yet implemented");
+	}
+
+}

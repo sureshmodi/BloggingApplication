@@ -28,11 +28,13 @@ import org.cisco.cmad.BloggingApp.Database.JPABlogAppDAO;
 import org.cisco.cmad.BloggingApp.api.BlogPost;
 import org.cisco.cmad.BloggingApp.api.BlogPostEntity;
 import org.cisco.cmad.BloggingApp.api.BlogPostList;
+import org.cisco.cmad.BloggingApp.api.BlogPostNotCreatedExcepion;
 import org.cisco.cmad.BloggingApp.api.BlogUser;
 import org.cisco.cmad.BloggingApp.api.Comments;
 import org.cisco.cmad.BloggingApp.api.CommentsList;
 import org.cisco.cmad.BloggingApp.api.ErrorMsg;
 import org.cisco.cmad.BloggingApp.api.InvalidUserCredentialsException;
+import org.cisco.cmad.BloggingApp.api.JWTAuthentication;
 import org.cisco.cmad.BloggingApp.api.UserDetails;
 import org.cisco.cmad.BloggingApp.jwt.JWTImpl;
 import org.cisco.cmad.BloggingApp.service.CmadBlogPost;
@@ -45,11 +47,12 @@ public class BlogRestController {
 	
 	private static BlogUser bloguser = new CmadBlogUser();
 	private static BlogPost blogpost = new CmadBlogPost();
+	private static JWTAuthentication jwtauth = new JWTImpl();
 	
 	@POST
 	@Consumes({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
 	@Produces({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
-	@Path("/user/register")
+	@Path("/user/signup")
 	public Response addUser(UserDetails user) {
 			
 			if(user != null && user.getUserid() != null && !((user.getUserid().contentEquals("")))) {
@@ -67,37 +70,30 @@ public class BlogRestController {
 	@Produces({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
 	@Path("/blogpost/userid/{userid}")
 	public Response createBlogpost(BlogPostEntity recvblogpost, @PathParam("userid") String userid,
-								   @Context UriInfo uriinfo,@Context HttpHeaders headers)
-	
+			   @Context UriInfo uriinfo,@Context HttpHeaders headers) throws BlogPostNotCreatedExcepion
 	{
-				/*MultivaluedMap<String,String> headervalues = headers.getRequestHeaders();
-				String jwttoken = null;
-				
-				try {
-					jwttoken = headervalues.get(AUTHORIZATION).get(0);
-				} catch (NullPointerException e) {
-					throw new InvalidUserCredentialsException("User Not Authorized");
-				} 	
-		  	  		
-				System.out.println("Suresh: Authorization header value: "+jwttoken);
-				JWTImpl validate = new JWTImpl();
-				
-				try {
-					validate.parseJWT(userid, jwttoken);
-				} catch (SignatureException e) {
-					e.printStackTrace();
-					throw new InvalidUserCredentialsException("User Not Authorized");
-				}*/
-								
-			    blogpost.createBlogpost(recvblogpost, userid);
-			    String id = String.valueOf(recvblogpost.getBlogpostid());
-			    //URI uri = uriinfo.getAbsolutePathBuilder().path(id).build();
-			    URI uri = uriinfo.getBaseUriBuilder()
-			    		  .path(BlogRestController.class)
-			    		  .path("blogpost").path(id).build();
-			    
-			    recvblogpost.addLinks(uri, recvblogpost.getBlogpostid());
-				return Response.created(uri).entity(recvblogpost).build();
+
+		MultivaluedMap<String,String> headervalues = headers.getRequestHeaders();
+		String jwttoken = null;
+		
+		try {
+		jwttoken = headervalues.get(AUTHORIZATION).get(0);
+		} catch (NullPointerException e) {
+		throw new InvalidUserCredentialsException("No Authorization header present in HTTP Request");
+		}	  
+		
+		jwtauth.parseJwtToken(userid, jwttoken);	
+		
+		BlogPostEntity blogpostdb = blogpost.createBlogpost(recvblogpost, userid);
+		String id = String.valueOf(blogpostdb.getBlogpostid());
+		//URI uri = uriinfo.getAbsolutePathBuilder().path(id).build();
+		URI uri = uriinfo.getBaseUriBuilder()
+			  .path(BlogRestController.class)
+			  .path("blogpost").path(id).build();
+		
+		blogpostdb.addLinks(uri, recvblogpost.getBlogpostid());
+		return Response.created(uri).entity(blogpostdb).build();
+	
 	
 	}
 	
@@ -156,9 +152,7 @@ public class BlogRestController {
 						userdb.addLinks(uri,userdb.getBloglist().get(key).getBlogpostid());
 			}
 			
-			JWTImpl jwttoken = new JWTImpl();
-			  
-			String token = jwttoken.createJWT(user.getUserid(),uriinfo.getAbsolutePath().toString(),user.getUserid(),1000000);
+			String token = jwtauth.generateJwtToken(user.getUserid(),uriinfo.getAbsolutePath().toString(),user.getUserid(),1000000);
 			System.out.println("Suresh: Generated Token: "+token);
 				       									
 			return Response.status(Status.OK).entity(userdb).header(AUTHORIZATION,token).build();
@@ -176,19 +170,24 @@ public class BlogRestController {
 	@PUT
 	@Consumes({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
 	@Produces({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
-	@Path("/user/update")
+	@Path("/user/{userid}/updateprofile")
 
-	public Response updateUser(UserDetails user,@Context HttpHeaders headers) {
+	public Response updateUser(UserDetails user,@Context HttpHeaders headers,@PathParam("userid") String userid) {
 	
 		 	if (user != null) {
 		 		 		 		  				
-		 		  MultivaluedMap<String,String> headervalues = headers.getRequestHeaders();
-		 		  	 		  	 		  
-		 		  String jwttoken = headervalues.get(AUTHORIZATION).get(0);
-		 		  
-		 		  System.out.println("Suresh: Authorization header value: "+jwttoken);
+		 		MultivaluedMap<String,String> headervalues = headers.getRequestHeaders();
+		      	String jwttoken = null;
+			  
+		      	try {
+				  jwttoken = headervalues.get(AUTHORIZATION).get(0);
+		      	} catch (NullPointerException e) {
+				  throw new InvalidUserCredentialsException("No Authorization header present in HTTP Request");
+		      	}	  
+			 
+		      	 jwtauth.parseJwtToken(userid, jwttoken);	
 		 		  		 		  	 		 				 			  
-		 		  UserDetails userdb = bloguser.updateUser(user,jwttoken);
+		 		 UserDetails userdb = bloguser.updateUser(user);
 				
 				if (userdb != null) {
 					return Response.status(Status.OK).entity(userdb).build();
@@ -224,10 +223,29 @@ public class BlogRestController {
 	}
 	
 	@DELETE
-	@Produces({MediaType.TEXT_PLAIN})
+	@Produces({MediaType.TEXT_PLAIN, MediaType.APPLICATION_JSON })
 	@Path("/blogpost/{blogpostid}")
-	public Response deleteBlogpost(@PathParam("blogpostid") String blogpostid) {
+	public Response deleteBlogpost(@PathParam("blogpostid") String blogpostid,@Context HttpHeaders headers) {
 			
+			MultivaluedMap<String,String> headervalues = headers.getRequestHeaders();
+	      	String jwttoken = null;
+	      	String userid = null;
+		  
+	      	try {
+			  jwttoken = headervalues.get(AUTHORIZATION).get(0);
+	      	} catch (NullPointerException e) {
+			  throw new InvalidUserCredentialsException("No Authorization header present in HTTP Request");
+	      	}	  
+		 	      		      	
+	      	userid = blogpost.getblogUserId(blogpostid);
+	      	
+	      	if (userid != null) {
+	      			jwtauth.parseJwtToken(userid, jwttoken);
+	      			System.out.println("Suresh: User Authenticated successfully while deleting blogpost");
+	      	} else {
+	      			System.out.println("Not received userid from DB");
+	      	}
+	      	
 			if (blogpost.deleteBlogpost(blogpostid)) {
 				return Response.status(Status.OK).entity("Successfully deleted").build();
 			} else {
@@ -248,8 +266,7 @@ public class BlogRestController {
 			
 			BlogPostList bloglist = new BlogPostList();
 			//bloglist.setBloglist(dbbloglist);
-			
-			
+						
 			for (int i=0;i<dbbloglist.size();i++) {
 				URI uri = uriinfo.getBaseUriBuilder().path(BlogRestController.class)
 							.path("blogpost")
@@ -273,12 +290,23 @@ public class BlogRestController {
 	@Produces({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
 
 	@Path("/user/{userid}/home")
-	public Response userDetails(@PathParam("userid") String userid,@Context UriInfo uriinfo) {
+	public Response userDetails(@PathParam("userid") String userid,@Context UriInfo uriinfo,@Context HttpHeaders headers) {
 			
 		UserDetails userdb = null;
 		ErrorMsg errormsg= new ErrorMsg();
-				
+						
 		if (userid!=null) {
+			
+			MultivaluedMap<String,String> headervalues = headers.getRequestHeaders();
+	      	String jwttoken = null;
+		  
+	      	try {
+			  jwttoken = headervalues.get(AUTHORIZATION).get(0);
+	      	} catch (NullPointerException e) {
+			  throw new InvalidUserCredentialsException("No Authorization header present in HTTP Request");
+	      	}	  
+		 
+	      	jwtauth.parseJwtToken(userid, jwttoken);	
 			userdb = bloguser.getUserDetails(userid);
 					
 			Set<String> keys = userdb.getBloglist().keySet();
@@ -304,19 +332,31 @@ public class BlogRestController {
 	
 	@POST
 	//@Consumes({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
-	@Produces(MediaType.TEXT_PLAIN)
+	@Produces({MediaType.TEXT_PLAIN,MediaType.APPLICATION_JSON})
 
 	@Path("/user/{userid}/logout")
-	public Response userLogout(@PathParam("userid") String userid, @Context UriInfo uriinfo) {
+	public Response userLogout(@PathParam("userid") String userid, @Context UriInfo uriinfo, 
+							   @Context HttpHeaders headers) {
 			
+		MultivaluedMap<String,String> headervalues = headers.getRequestHeaders();
 		ErrorMsg errormsg= new ErrorMsg();
-		//String authorization = "Authorization";
+		String jwttoken = null;
 				
+		try {
+			  jwttoken = headervalues.get(AUTHORIZATION).get(0);
+		  	  System.out.println("Suresh: Authorization header value: "+jwttoken);
+			  
+		} catch (NullPointerException e) {
+			  throw new InvalidUserCredentialsException("No Authorization header present in HTTP Request");
+		}	 
+						
 		if (userid!=null) {
 			try {
-				JWTImpl jwttoken = new JWTImpl();
-				jwttoken.deleteKey(userid);
+				jwtauth.parseJwtToken(userid, jwttoken);
+				jwtauth.deleteJwtToken(userid);
 				return Response.status(Status.OK).entity("User Successfully logged out").build();
+			} catch (InvalidUserCredentialsException e) {
+				throw e;
 			} catch (Exception e) {
 				e.printStackTrace();
 				System.out.println("Caught Exception:"+e.toString());

@@ -39,7 +39,7 @@ public class DBImpl {
 			  
 			  JWTImpl jwttoken = new JWTImpl();
 			  
-			  String key = jwttoken.createJWT("Suresh","CMAD","Cisco",100000);
+			  String key = jwttoken.generateJwtToken("Suresh","CMAD","Cisco",100000);
 			  System.out.println("Suresh: Generated Token: "+key);
 			  
 			  //jwttoken.parseJWT(key);

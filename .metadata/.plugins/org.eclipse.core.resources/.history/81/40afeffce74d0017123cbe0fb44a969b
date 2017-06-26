@@ -1,0 +1,301 @@
+package org.cisco.cmad.BloggingApp.Database;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+import javax.json.stream.JsonParsingException;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+import javax.persistence.criteria.CriteriaQuery;
+
+import org.cisco.cmad.BloggingApp.api.BlogPostEntity;
+import org.cisco.cmad.BloggingApp.api.Comments;
+import org.cisco.cmad.BloggingApp.api.UserDetails;
+import org.cisco.cmad.BloggingApp.api.UserRegistrationFailedException;
+
+public class JPABlogAppDAO implements BlogPostDAOInf,UserDAOInf,CommentsDAOInf {
+
+	public static EntityManagerFactory factory = Persistence.createEntityManagerFactory("Blogging-App");
+		
+	@Override
+	public void createUser(UserDetails userdetails) throws Exception {
+		
+		EntityManager em = factory.createEntityManager();
+		EntityTransaction tx = em.getTransaction();
+		tx.begin();
+		
+		try {
+			em.persist(userdetails);
+			tx.commit();
+		} catch(Exception ex) {
+			System.out.println("Suresh,Caught excpetion:"+ex.toString());
+			ex.printStackTrace();
+			tx.rollback();
+			throw ex;
+		} finally {
+			
+			em.close();
+		}
+		
+
+	}
+
+	@Override
+	public UserDetails updateProfile(UserDetails user) {
+		
+		EntityTransaction tx = null;
+		EntityManager em = null;
+		UserDetails userdb = null;
+		
+		try {
+				em = factory.createEntityManager();
+				tx = em.getTransaction();
+				tx.begin();
+				
+				userdb = em.find(UserDetails.class,user.getUserid());
+				
+				if (userdb != null) {
+						System.out.println("Suresh: userid from db: "+userdb.getUserid());
+				}
+				
+				System.out.println("Suresh: Received userid: "+user.getUserid());
+				System.out.println("Suresh: Received mobile no: "+user.getMobileno());
+				System.out.println("Suresh: Updating user address");
+				
+				if (user.getAddress() != null) {
+						userdb.setAddress(user.getAddress());
+						System.out.println("Suresh: modified user address: "+userdb.getAddress());
+				} else {
+						System.out.println("Suresh: not modified user address: "+user.getAddress());
+				}
+				
+				if (user.getEmailid() != null) {
+						userdb.setEmailid(user.getEmailid());
+						System.out.println("Suresh: modified user email_id: "+userdb.getEmailid());
+				}
+				
+				if (user.getPassword() != null) {
+						userdb.setPassword(user.getPassword());
+						System.out.println("Suresh: modified user email_id: "+userdb.getPassword());
+				}
+				
+				if (user.getFullname() != null) {
+						userdb.setFullname(user.getFullname());
+						System.out.println("Suresh: modified user name: "+userdb.getFullname());
+				}
+		
+				if (user.getUserid() != null) {
+						System.out.println("Suresh: Modifying Userid");
+						userdb.setUserid(user.getUserid());
+						System.out.println("Suresh: modified user id: "+userdb.getUserid());
+				} else {
+						System.out.println("Suresh: not modified userid: "+userdb.getUserid());
+				}
+				
+				if (user.getMobileno() != 0) {
+						System.out.println("Suresh: Modifying mobile number");
+						userdb.setMobileno(user.getMobileno());
+						System.out.println("Suresh: modified mobile number: "+userdb.getMobileno());
+				}  else {
+						System.out.println("Suresh: not modified mobile number: "+userdb.getMobileno());
+				}
+				
+				tx.commit();
+				em.close();
+				return userdb;
+				
+		}  catch (Exception e) {
+				System.out.println("Suresh: Caught exception inside update user profile");
+			    e.printStackTrace();
+				tx.rollback();
+				em.close();
+				return null;
+		}
+	}
+
+	@Override
+	public UserDetails retreiveUser(String userid) {
+		
+		EntityManager em = factory.createEntityManager();
+		EntityTransaction tx = em.getTransaction();
+		tx.begin();
+		
+		UserDetails user = em.find(UserDetails.class,userid);
+		
+		if (user!=null) {
+			user.getBloglist().size();
+		}
+	
+		tx.commit();
+		em.close();
+		return user;
+	}
+	
+	@Override
+	public void createBlogpost(BlogPostEntity blogpost,String userid) {
+		 
+		EntityManager em = null;
+		EntityTransaction tx = null;
+		
+		try {
+			em = factory.createEntityManager();
+			tx = em.getTransaction();
+			tx.begin();
+			
+			UserDetails user = em.find(UserDetails.class, userid);
+			user.getBloglist().put(blogpost.getBlogpostid(), blogpost);
+			blogpost.setUser(user);
+			em.persist(blogpost);
+			tx.commit();
+		} catch (Exception e) {
+			tx.rollback();
+			e.printStackTrace();
+			System.out.println("Suresh: Caught exception"+e.toString()+"in JPABlogAppDAO:createBlogpost method");
+		} finally {
+			em.close();
+		}
+		
+		
+
+	}
+
+	@Override
+	public boolean deleteBlogpost(String blogpostid) {
+		
+		EntityManager em = null;
+		EntityTransaction tx = null;
+		boolean result = false;
+			
+		try {
+				em = factory.createEntityManager();
+			    tx = em.getTransaction();
+			    tx.begin();
+			
+			    BlogPostEntity blogpost=em.find(BlogPostEntity.class, blogpostid);
+			    em.remove(blogpost);
+			    tx.commit();
+			    result = true;
+		} catch (Exception e) {
+				tx.rollback();
+		} finally {
+				em.close();
+				
+		}
+		
+		return result;
+	}
+
+	@Override
+	public BlogPostEntity retrieveBlogpost(String blogpostid) {
+		
+		BlogPostEntity blogpost = null;
+		//Map<String, BlogPostEntity> blogpostlist = null;
+		EntityManager em = factory.createEntityManager();
+		EntityTransaction tx = em.getTransaction();
+		tx.begin();
+		
+//		UserDetails user = em.getReference(UserDetails.class, userid);
+//		if (user!=null) {
+//			blogpostlist = user.getBloglist();
+//		} else {
+//			//tx.commit();
+//			em.close();
+//			return null;
+//			
+//		}
+		
+		blogpost = em.find(BlogPostEntity.class,blogpostid);
+		
+		
+//		if(blogpostlist != null) {
+//			blogpost = blogpostlist.get(blogpostid);
+//			//blogpost.getCommentslist();
+//			//blogpost.setCommentslist(comm);
+//			//blogpost.getUser();
+//			//blogpost.setDatecreated(blogpost.getDatecreated());
+//		} else {
+//			//tx.commit();
+//			em.close();
+//			return null;
+//		}
+		
+		if(blogpost!=null) {
+			blogpost.setComments_count(blogpost.getCommentslist().size());
+			em.close();
+			return blogpost;
+		} else {
+			//tx.commit();
+			em.close();
+			return null;
+		}
+	}
+
+	@Override
+	public List<BlogPostEntity> listallBlogPosts() {
+		
+		EntityManager em = null;
+		EntityTransaction tx = null;
+		List<BlogPostEntity> ListOfBlogPosts = null;
+		
+		try {
+			em = factory.createEntityManager();
+		    tx = em.getTransaction();
+		    tx.begin();
+		
+		    CriteriaQuery<BlogPostEntity> criteria = em.getCriteriaBuilder().createQuery(BlogPostEntity.class);
+		
+		    criteria.select(criteria.from(BlogPostEntity.class));
+		    
+	   	    ListOfBlogPosts = em.createQuery(criteria).getResultList();
+		} finally {
+			em.close();
+		}
+		
+		 return ListOfBlogPosts;
+			
+	}
+	
+	public Comments postComments(Comments comment,String blogid) {
+		 
+		EntityManager em = factory.createEntityManager();
+		EntityTransaction tx = em.getTransaction();
+		tx.begin();
+		
+		 BlogPostEntity blogpost = em.find(BlogPostEntity.class, blogid);
+			 		 
+		 if (blogpost!=null) {
+			 	// blogpost.getComments().put(blogpost.getBlogpostid(), comment);
+			  	 blogpost.getCommentslist().add(comment);
+			 	 comment.setBlogpost(blogpost);
+			     			     
+			     em.persist(comment);
+				 tx.commit();
+			     
+		 }	 
+		
+		em.close();
+				
+		return comment;
+
+	}
+	
+	@Override
+	public List<Comments> getallComments(String blogid) {
+		
+			EntityManager em = factory.createEntityManager();
+			EntityTransaction tx = em.getTransaction();
+			tx.begin();
+			
+			BlogPostEntity blogpost = em.find(BlogPostEntity.class, blogid);
+			
+		    List<Comments> commlist = blogpost.getCommentslist();
+		   		
+			return commlist;
+	}
+
+}

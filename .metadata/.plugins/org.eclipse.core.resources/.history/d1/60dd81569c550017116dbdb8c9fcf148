@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Online Blog</title>
+<meta content="noindex, nofollow" name="robots">
+<link href="blogging.css" rel="stylesheet">
+<script src="jquery-2.1.3.js"></script>
+<script src="blogging.js"></script>
+</head>
+<body>
+<div class="header" id="main">
+<img id="logo" src="logo.png">
+<h1>Online Blogging</h1>
+<hr/>
+<!-- Blog header -->
+<div id="blogheader">
+  <div id="headerhome" style="display:none;">
+    <input id="home" type="button" value="Home">
+  </div> 
+  <div id="headerdisplayposts">
+    <input id="displayposts" type="button" value="All Users Posts">
+  </div>  
+  <div id="headerlogin">
+    <input id="headerloginform" type="button" value="Log In">
+  </div>
+  <div id="headercreatepost" style="display:none;">
+    <!-- <a href="#" id="createpost"><strong>Create Post</strong></a> -->
+    <input id="createpost" type="button" value="Create Post">
+  </div>
+  <div id="headeruser" style="display:none;"> <span id="useidspan">Signed in as: <strong id="useridstrong">USER</strong></span></div>
+  <div id="headerupdateprofile" style="display:none;">
+    <input id="headerupdateprofileform" type="button" value="Update Profile">
+  </div>
+  <div id="headerlogout" style="display:none;">
+    <input id="logout" type="button" value="Log Out">
+  </div>
+  <hr/>
+</div>
+<!-- Create Div First For Login Form -->
+<div id="first">
+  <form action="" id="loginform" method="post" name="loginform">
+    <h3>Login to your Blog account.</h3>
+    <input id="loginuserid" placeholder="User Id" type="text" size="25"> <br />
+    <input id="loginpassword" placeholder="Password" type="password" size="25"> <br />
+    
+    <input id="login" type="button" value="Sign In">
+    <!-- 
+    <p id="one"><a href="#">Forgot Password ?</a></p>
+     -->
+    <p id="two">Don't have account? <a class="signup" href="#" id="signup">Sign up here</a></p>
+  </form>
+</div>
+<!-- Create Div Second For Signup Form-->
+<div id="second" style="display:none;">
+  <form action="" id="form" method="post" name="form">
+    <h3>Create a Free Account</h3>
+    <input id="registeruserid" placeholder="User Id" type="text" size="25"> <br />
+    <input id="registerpassword" placeholder="Password" type="password" size="25"> <br />
+    <input id="name" placeholder="Full Name" type="text" size="25"> <br />
+    <input id="contact" placeholder="Contact Number" type="text" size="25"> <br />
+    <input id="registeremail" placeholder="Email" type="text" size="25"> <br />
+    <input id="address" placeholder="Address" type="text" size="25"> <br />
+    <input id="register" type="button" value="Create your Free account">
+    <p id="two">Already have an account? <a class="signin" href="#" id="signin">Sign in</a></p>
+  </form>
+</div>
+
+ <!-- Update profile form -->
+ <div data-role="page" id="updateprofile" style="display:none;">
+        <div data-role="header">
+            <h1>Update User Profile</h1>
+        </div>
+        <div data-role="content">
+            <div data-role="content">
+                <form id="updateprofileform">
+                    <div data-role="fieldcontain">
+                       <label for="updateprofilename"><strong>Full Name    : </strong></label>
+                       <input id="updateprofilename" placeholder="Full Name" type="text" size="25"> <br />
+                       <label for="updateprofilecontact"><strong>Contact Number: </strong></label>
+                       <input id="updateprofilecontact" placeholder="Contact Number" type="text" size="25"> <br />
+                       <label for="updateprofileregisteremail"><strong>Email       : </strong></label>
+                       <input id="updateprofileregisteremail" placeholder="Email" type="text" size="25"> <br />
+                       <label for="updateprofileaddress"><strong>Address       : </strong></label>
+                       <input id="updateprofileaddress" placeholder="Address" type="text" size="25"> <br />
+                       <input id="updateprofilesubmit" type="button" value="Submit">                                                                
+                    </div>
+                </form>
+            </div>
+        </div>
+ </div>
+
+ <!-- createNewPostPage -->
+ <div data-role="page" id="createblogpost" style="display:none;">
+        <div data-role="header">
+            <h1>Create New Post</h1>
+        </div>
+        <div data-role="content">
+            <div data-role="content">
+                <form id="createpostform">
+                    <div data-role="fieldcontain">
+                        <label for="postId"><strong>Post ID: </strong></label>
+                        <input type="text" name="postId" id="createblogpostid" size="52" value=""/> <br /> <br />                    
+                        <label for="postTitle"><strong>Post Title: </strong></label>
+                        <input type="text" name="postTitle" id="createblogposttitle" size="52" value=""/> <br /> <br />
+                        <label for="postContent"><strong>Post Content:</strong></label>
+                        <textarea cols="50" rows="15" maxlength="250000" name="postContent" id="createblogpostcontent"></textarea> <br />
+                        <input id="createblogpostsubmit" type="button" value="Submit Post">
+                    </div>
+                </form>
+            </div>
+        </div>
+ </div>
+
+
+<!-- Display particular blog post -->
+<div data-role="page" id="displayblogpost" style="display:none;">
+    <div class="span-24">
+        <h2>Blog post details</h2>
+        <div id="blogpost">
+        </div>
+    </div>    
+    <div class="span-24">
+        <div id="blogshowcomments" style="display:none;">
+        </div>
+    </div>
+    
+</div>
+
+<!-- createNewCommentPage -->
+ <div data-role="page" id="createblogcomment" style="display:none;">
+        <div data-role="header">
+            <h1>Create New Comment</h1>
+        </div>
+        <div data-role="content">
+            <div data-role="content">
+                <form id="createcommentform">
+                    <div data-role="fieldcontain">
+                        <label for="postComment"><strong>Comment:</strong></label>
+                        <textarea cols="50" rows="15" maxlength="2500" name="postComment" id="createblogcommentcontent"></textarea> <br />
+                        <input id="createblogcommentsubmit" type="button" value="Submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+ </div>
+
+
+<div id="bloglist" style="display:none;">
+<p> Blog post details </p>
+<table id="bloglisttable" style="width:100%">
+  <thead>
+  <tr>
+    <th>Title</th>
+    <th>Details</th>
+  </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+</div>
+
+
+
+</div>
+</body>
+</html>

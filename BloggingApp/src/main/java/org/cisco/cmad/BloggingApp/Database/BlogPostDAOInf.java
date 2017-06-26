@@ -11,6 +11,7 @@ public interface BlogPostDAOInf {
     public boolean deleteBlogpost(String blogpostid);
     public BlogPostEntity retrieveBlogpost(String blogpostid);
     public List<Object[]> listallBlogPosts();
+    public String blogUserid(String blogpostid); //Returns userid
 	       
 	
 }

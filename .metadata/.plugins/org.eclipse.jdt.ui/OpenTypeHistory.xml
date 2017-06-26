@@ -2,5 +2,7 @@
 <typeInfoHistroy>
 <typeInfo handle="=BloggingApp/src\/main\/java&lt;org.cisco.cmad.BloggingApp.Database{UserDAOInf.java[UserDAOInf" modifiers="513" timestamp="1496454818338"/>
 <typeInfo handle="=BloggingApp/C:\/Program Files\/Java\/jre1.8.0_131\/lib\/rt.jar&lt;org.omg.PortableInterceptor(USER_EXCEPTION.class[USER_EXCEPTION" modifiers="1537" timestamp="1493458979267"/>
-<typeInfo handle="=BloggingApp/src\/main\/java&lt;org.cisco.cmad.BloggingApp.api{BlogPost.java[BlogPost" modifiers="513" timestamp="1496715374936"/>
+<typeInfo handle="=BloggingApp/src\/main\/java&lt;org.cisco.cmad.BloggingApp.api{BlogPost.java[BlogPost" modifiers="513" timestamp="1497108746347"/>
+<typeInfo handle="=BloggingApp/src\/main\/java&lt;org.cisco.cmad.BloggingApp.service{CmadBlogUser.java[CmadBlogUser" modifiers="1" timestamp="1497949883372"/>
+<typeInfo handle="=BloggingApp/src\/main\/java&lt;org.cisco.cmad.BloggingApp.Rest{BlogRestController.java[BlogRestController" modifiers="1" timestamp="1498144059797"/>
 </typeInfoHistroy>

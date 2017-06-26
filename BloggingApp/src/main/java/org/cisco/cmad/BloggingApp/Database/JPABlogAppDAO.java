@@ -152,6 +152,7 @@ public class JPABlogAppDAO implements BlogPostDAOInf,UserDAOInf,CommentsDAOInf {
 			UserDetails user = em.find(UserDetails.class, userid);
 			user.getBloglist().put(blogpost.getBlogpostid(), blogpost);
 			blogpost.setUser(user);
+			blogpost.setAuthor(userid);
 			em.persist(blogpost);
 			tx.commit();
 		} catch (Exception e) {
@@ -305,5 +306,33 @@ public class JPABlogAppDAO implements BlogPostDAOInf,UserDAOInf,CommentsDAOInf {
 		   		
 			return commlist;
 	}
+
+	@Override
+	public String blogUserid(String blogpostid) {
+		
+		EntityManager em = null;
+		EntityTransaction tx = null;
+		String userid = null;
+		
+		BlogPostEntity blogpost = null;
+				
+		try {
+			em = factory.createEntityManager();
+		    tx = em.getTransaction();
+		    tx.begin();
+		
+		    blogpost=em.find(BlogPostEntity.class, blogpostid);
+		    userid = blogpost.getUser().getUserid();
+		    tx.commit();
+		    System.out.println("Suresh: received userid from DB: "+userid);
+		} catch (Exception e) {
+			tx.rollback();
+		} finally {
+			em.close();
+			
+		}
+		
+		return userid;
+	}	
 
 }

@@ -1,0 +1,38 @@
+package org.cisco.cmad.BloggingApp;
+
+import static org.junit.Assert.*;
+
+import org.cisco.cmad.BloggingApp.Rest.BlogRestController;
+import org.junit.Assert;
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+import net.bytebuddy.dynamic.TypeResolutionStrategy.Passive;
+
+public class BlogUserTest {
+
+	@Test
+	public void testCreateUser() {
+		//fail("Not yet implemented");
+		BlogRestController blog = new BlogRestController();
+		
+		blog.addUser(null);
+		assertEquals(expected, actual);
+	}
+
+	@Test
+	public void testUserLogin() {
+		//fail("Not yet implemented");
+	}
+
+	@Test
+	public void testUpdateUser() {
+		//fail("Not yet implemented");
+	}
+
+	@Test
+	public void testGetUserDetails() {
+		//fail("Not yet implemented");
+	}
+
+}

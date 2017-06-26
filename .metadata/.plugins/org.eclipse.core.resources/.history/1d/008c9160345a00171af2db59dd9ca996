@@ -1,0 +1,7 @@
+package org.cisco.cmad.BloggingApp.api;
+
+public interface JWTAuthentication {
+	
+	
+
+}

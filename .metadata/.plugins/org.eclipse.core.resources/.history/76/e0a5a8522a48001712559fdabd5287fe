@@ -1,7 +1,0 @@
-package org.cisco.cmad.BloggingApp.Database;
-
-public interface CommentsDAOInf {
-	
-	public void postComments();
-
-}

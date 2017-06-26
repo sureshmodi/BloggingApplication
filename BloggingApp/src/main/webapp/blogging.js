@@ -12,7 +12,7 @@ $(document).ready(function() {
 			"password" : password
 		};
 	   
-	    alert("sending ajax query...!!!!!!");
+	    
 		$.ajax({
 			url : '/BloggingApp/webapi/blogging/user/login',
 			cache:'false',
@@ -20,11 +20,13 @@ $(document).ready(function() {
 			dataType : 'json',
 			contentType: "application/json; charset=utf-8",
 			data : JSON.stringify(user),
-			success : function(data) {
+			success : function(data,textStatus,jqXHR) {
 			    alert("You have successfully Logged in...!!!!!!");
+			    var token = jqXHR.getResponseHeader("Authorization");
 			    var userId = data.userid;
 			    if (localStorage) {
 			    	localStorage.setItem('userId', userId);
+			    	localStorage.setItem('jwttoken',token);
 			    } else {
 			    	alert("browser doesnot support local storage");
 			    }
@@ -90,7 +92,7 @@ $(document).ready(function() {
 	  $('#target').html('sending..');
 
 	  $.ajax({
-			url : '/BloggingApp/webapi/blogging/user/register',
+			url : '/BloggingApp/webapi/blogging/user/signup',
 			cache:'false',
 			type : 'post',
 			dataType : 'json',
@@ -184,13 +186,16 @@ $(document).ready(function() {
 			  "address" : profileaddress
 			};
 		   
-		    alert("sending ajax query...!!!!!!");
+		    
 			$.ajax({
-				url : '/BloggingApp/webapi/blogging/user/update',
+				url : '/BloggingApp/webapi/blogging/user/'+userid+'/updateprofile',
 				cache:'false',
 				type : 'put',
 				dataType : 'json',
 				contentType: "application/json; charset=utf-8",
+				beforeSend: function (xhr) {
+				    xhr.setRequestHeader ("Authorization", localStorage.getItem('jwttoken'));
+				},
 				data : JSON.stringify(updateprofile),
 				success : function(data) {
 				    alert("Successfull updated the profile...!!!!!!");
@@ -227,13 +232,16 @@ $(document).ready(function() {
 			  "author" : userid
 			};
 		   
-		    alert("sending ajax query...!!!!!!");
+		    
 			$.ajax({
 				url : '/BloggingApp/webapi/blogging/blogpost/userid/' + userid,
 				cache:'false',
 				type : 'post',
 				dataType : 'json',
 				contentType: "application/json; charset=utf-8",
+				beforeSend: function (xhr) {
+				    xhr.setRequestHeader ("Authorization", localStorage.getItem('jwttoken'));
+				},
 				data : JSON.stringify(createpost),
 				success : function(data) {
 				    alert("Successfull created the blogpost...!!!!!!");
@@ -263,14 +271,17 @@ $(document).ready(function() {
 	  $('#second').hide();
 	  $('#bloglist').hide();
 	  
-	    alert("sending ajax query...!!!!!!");
+	    
 	    userid = localStorage.getItem('userId');
 		$.ajax({
 			url: '/BloggingApp/webapi/blogging/user/' + userid + '/home',
 			cache:'false',
 			type : 'GET',
 			dataType : 'json',
-			contentType: "application/json; charset=utf-8",	  			
+			contentType: "application/json; charset=utf-8",	
+			beforeSend: function (xhr) {
+			    xhr.setRequestHeader ("Authorization", localStorage.getItem('jwttoken'));
+			},
 			success : function(data) {
      		    alert("Fetched all user posts successfully!!!");
 			    alert(data);
@@ -341,7 +352,7 @@ $(document).ready(function() {
 		    
 			var uri = document.getElementById("blogcreatecomment").href;			
 			alert(uri);
-		    alert("sending ajax query...!!!!!!");
+		    
 			$.ajax({
 				url : uri + '/postcomment',
 				cache:'false',
@@ -370,7 +381,7 @@ $(document).ready(function() {
 	    alert(href);
 	    event.preventDefault();
 		
-	    alert("sending ajax query...!!!!!!");
+	    
 		$.ajax({
 			url : href + '/comments',
 			cache:'false',
@@ -441,13 +452,16 @@ $(document).ready(function() {
 	    event.preventDefault();
 	    $('#displayblogpost').hide();
 	    
-	    alert("sending ajax query...!!!!!!");
+	    
 		$.ajax({
 			url : href,
 			cache:'false',
 			type : 'DELETE',
 			dataType : 'json',
 			contentType: "application/json; charset=utf-8",
+			beforeSend: function (xhr) {
+			    xhr.setRequestHeader ("Authorization", localStorage.getItem('jwttoken'));
+			},
 			success : function(data) {
 			    alert("Successfully deleted the post...!!!!!!");
 			    alert(data);
@@ -482,7 +496,7 @@ $(document).ready(function() {
 	    
 		$('#bloglist').hide();		
 	    $("#blogpost").empty();
-	    alert("sending ajax query...!!!!!!");
+	    
 		$.ajax({
 			url : href,
 			cache:'false',
@@ -553,16 +567,20 @@ $(document).ready(function() {
 		  "userid" : userid,
 		};
 	   
-	    alert("sending ajax query...!!!!!!");
+		
 		$.ajax({
-			url : '/BloggingApp/webapi/blogging/logout/' + userid,
+			url : '/BloggingApp/webapi/blogging/user/'+userid +'/logout',
 			cache:'false',
 			type : 'post',
 			dataType : 'json',
 			contentType: "application/json; charset=utf-8",
+			beforeSend: function (xhr) {
+			    xhr.setRequestHeader ("Authorization", localStorage.getItem('jwttoken'));
+			},
 			data : JSON.stringify(logout),
 			success : function(data) {
 			    alert("Successfully logged out..!!!!!!");
+			    localStorage.setItem('jwttoken',null);
 			    alert(data);
 			},
 		    statusCode: {

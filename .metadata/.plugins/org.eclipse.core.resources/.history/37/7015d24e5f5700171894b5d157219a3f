@@ -1,0 +1,64 @@
+package org.cisco.cmad.BloggingApp;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class BlogRestControllerTest {
+
+	@Test
+	public void testAddUser() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testCreateBlogpost() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testPostComment() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testGetBlogpost() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testUserLogin() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testUpdateUser() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testGetallComments() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testDeleteBlogpost() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testGetallBlogposts() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testUserDetails() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testUserLogout() {
+		fail("Not yet implemented");
+	}
+
+}

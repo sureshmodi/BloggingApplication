@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="BlogRestControllerTest" project="BloggingApp" tests="11" started="11" failures="0" errors="0" ignored="0">
+  <testsuite name="org.cisco.cmad.BloggingApp.BlogRestControllerTest" time="2.011">
+    <testcase name="testAddUser" classname="org.cisco.cmad.BloggingApp.BlogRestControllerTest" time="2.01"/>
+    <testcase name="testUpdateUser" classname="org.cisco.cmad.BloggingApp.BlogRestControllerTest" time="0.0"/>
+    <testcase name="testCreateBlogpost" classname="org.cisco.cmad.BloggingApp.BlogRestControllerTest" time="0.0"/>
+    <testcase name="testGetallBlogposts" classname="org.cisco.cmad.BloggingApp.BlogRestControllerTest" time="0.0"/>
+    <testcase name="testGetallComments" classname="org.cisco.cmad.BloggingApp.BlogRestControllerTest" time="0.0"/>
+    <testcase name="testDeleteBlogpost" classname="org.cisco.cmad.BloggingApp.BlogRestControllerTest" time="0.0"/>
+    <testcase name="testUserDetails" classname="org.cisco.cmad.BloggingApp.BlogRestControllerTest" time="0.0"/>
+    <testcase name="testUserLogout" classname="org.cisco.cmad.BloggingApp.BlogRestControllerTest" time="0.0"/>
+    <testcase name="testGetBlogpost" classname="org.cisco.cmad.BloggingApp.BlogRestControllerTest" time="0.0"/>
+    <testcase name="testPostComment" classname="org.cisco.cmad.BloggingApp.BlogRestControllerTest" time="0.0"/>
+    <testcase name="testUserLogin" classname="org.cisco.cmad.BloggingApp.BlogRestControllerTest" time="0.001"/>
+  </testsuite>
+</testrun>

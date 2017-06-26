@@ -1,7 +1,0 @@
-package org.cisco.cmad.BloggingApp.api;
-
-public class UserNotFoundException extends RuntimeException {
-	
-	
-
-}

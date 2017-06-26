@@ -1,7 +1,0 @@
-0:0:0:0:0:0:0:1 - - [09/Jun/2017:08:07:06 +0530] "-" 400 -
-0:0:0:0:0:0:0:1 - - [09/Jun/2017:09:00:58 +0530] "POST /BloggingApp/webapi/blogging/user/login HTTP/1.1" 401 54
-0:0:0:0:0:0:0:1 - - [09/Jun/2017:09:01:36 +0530] "POST /BloggingApp/webapi/blogging/user/login HTTP/1.1" 401 43
-127.0.0.1 - - [09/Jun/2017:09:18:30 +0530] "GET / HTTP/1.1" 404 1070
-0:0:0:0:0:0:0:1 - - [09/Jun/2017:09:44:47 +0530] "POST /BloggingApp/webapi/blogging/user/login HTTP/1.1" 401 43
-0:0:0:0:0:0:0:1 - - [09/Jun/2017:09:48:03 +0530] "POST /BloggingApp/webapi/blogging/user/register HTTP/1.1" 201 212
-0:0:0:0:0:0:0:1 - - [09/Jun/2017:09:48:58 +0530] "POST /BloggingApp/webapi/blogging/user/login HTTP/1.1" 200 212

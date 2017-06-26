@@ -1,0 +1,25 @@
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+	http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd" version="2.1">
+	
+	<persistence-unit name="Blogging-App">
+			<properties>
+				<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+				<!-- <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/Library" /> -->
+				<property name="javax.persistence.jdbc.url" value="jdbc:mysql://104.154.147.202:3306/Blogging" />
+				<!-- <property name="javax.persistence.jdbc.user" value="Library" /> -->
+				<property name="javax.persistence.jdbc.user" value="Blogger" />
+				<!-- <property name="javax.persistence.jdbc.password" value="library123" /> -->
+				<property name="javax.persistence.jdbc.password" value="library123" />
+				
+				<!-- Hibernate Specific properties -->
+				<property name="hibernate.hbm2ddl.auto" value="create" />
+				<property name="hibernate.show_sql" value="true"/>
+				<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect"/>
+				
+			</properties>
+	
+	</persistence-unit>
+
+
+</persistence>
