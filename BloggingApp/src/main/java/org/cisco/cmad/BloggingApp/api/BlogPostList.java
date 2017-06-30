@@ -29,14 +29,14 @@ public class BlogPostList {
 		this.links = links;
 	}
 	
-	public void addLinks(String title, URI uri) {
+	public void addLinks(String blogtitle, URI uri) {
 			
 			Link link = new Link();
-			link.setReference(title);
+			link.setBlogtitle(blogtitle);
 			link.setUri(uri);
 			links.add(link);
 			
-		}
+	}
 	
 
 }

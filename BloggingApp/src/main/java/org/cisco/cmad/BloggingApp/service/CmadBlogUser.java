@@ -113,8 +113,12 @@ public class CmadBlogUser implements BlogUser{
 	public UserDetails getUserDetails(String userid) {
 		
 		UserDetails userdb = null;
-				
-		userdb = userdao.retreiveUser(userid);
+		
+		if(userid != null) {		
+			userdb = userdao.retreiveUser(userid);
+		} else {
+			throw new InvalidUserCredentialsException("userid is empty");
+		}
 		
 		if (userdb != null) {
 			

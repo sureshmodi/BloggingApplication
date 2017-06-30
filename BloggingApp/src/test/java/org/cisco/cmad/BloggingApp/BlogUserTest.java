@@ -4,6 +4,8 @@ import static org.junit.Assert.*;
 
 import org.cisco.cmad.BloggingApp.Rest.BlogRestController;
 import org.cisco.cmad.BloggingApp.api.InvalidUserCredentialsException;
+import org.cisco.cmad.BloggingApp.api.UserDetails;
+import org.cisco.cmad.BloggingApp.service.CmadBlogUser;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -21,19 +23,65 @@ public class BlogUserTest {
 				
 	}
 
-	/*@Test
+	@Test
 	public void testUserLogin() {
-		//fail("Not yet implemented");
+		
+		UserDetails userdetails = null;
+		CmadBlogUser user = new CmadBlogUser();
+		
+		
+		
+		try {
+			
+			user.createUser(userdetails);
+			
+		} catch (Exception e) {
+			System.out.println("Suresh Test: Caught 1st Exception");
+			e.printStackTrace();
+			e.getMessage();
+			assertTrue(e instanceof NullPointerException);
+			
+		}
 	}
 
 	@Test
 	public void testUpdateUser() {
-		//fail("Not yet implemented");
+		
+		UserDetails userdetails = null;
+		CmadBlogUser user = new CmadBlogUser();
+		
+		
+		
+		try {
+			
+			user.updateUser(userdetails);
+			
+		} catch (Exception e) {
+			System.out.println("Suresh Test: Caught 1st Exception");
+			e.printStackTrace();
+			e.getMessage();
+			assertTrue(e instanceof NullPointerException);
+			
+		}
 	}
 
 	@Test
 	public void testGetUserDetails() {
-		//fail("Not yet implemented");
-	}*/
+		UserDetails userdetails = null;
+		CmadBlogUser user = new CmadBlogUser();
+		
+			
+		try {
+			
+			user.getUserDetails(null);
+			
+		} catch (Exception e) {
+			System.out.println("Suresh Test: Caught 1st Exception");
+			e.printStackTrace();
+			e.getMessage();
+			assertTrue(e instanceof InvalidUserCredentialsException);
+			
+		}
+	}
 
 }

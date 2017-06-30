@@ -2,7 +2,10 @@ package org.cisco.cmad.BloggingApp;
 
 import static org.junit.Assert.*;
 
+import javax.ws.rs.core.UriInfo;
+
 import org.cisco.cmad.BloggingApp.Rest.BlogRestController;
+import org.cisco.cmad.BloggingApp.api.BlogPostEntity;
 import org.cisco.cmad.BloggingApp.api.InvalidUserCredentialsException;
 import org.cisco.cmad.BloggingApp.api.UserDetails;
 import org.junit.Test;
@@ -37,7 +40,8 @@ public class BlogRestControllerTest {
 
 	@Test
 	public void testCreateBlogpost() {
-		//fail("Not yet implemented");
+		
+		
 	}
 
 	@Test

@@ -12,6 +12,7 @@ public interface BlogPostDAOInf {
     public BlogPostEntity retrieveBlogpost(String blogpostid);
     public List<Object[]> listallBlogPosts();
     public String blogUserid(String blogpostid); //Returns userid
+	public List<Object[]> searchBlogPosts(String searchtext);
 	       
 	
 }

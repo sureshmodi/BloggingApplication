@@ -121,3 +121,65 @@ margin-bottom:0
   display: inline-block;
 }
 */
+
+ul.pagination {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+ul.pagination li {display: inline;}
+
+ul.pagination li a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+}
+
+ul.pagination li a.active {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+}
+
+ul.pagination li a:hover:not(.active) {background-color: #ddd;}
+
+div.center {text-align: center;}
+
+.blogsearch{
+   	position:absolute; 
+  	top: 0px;
+  	right: 0px;
+  	left:80%;
+}
+
+#searchtext {
+	width: 130px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 12px;
+    background-color: White;
+    background-image: url('search.png');
+    background-position: left; 
+    background-repeat: no-repeat;
+    padding: 8px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+	
+}
+
+#searchtext:focus {
+    width: 75%;
+}
+
+#UserDetails{
+   	position:absolute; 
+  	top: 0px;
+  	right: 0px;
+  	left:50%;
+}
+

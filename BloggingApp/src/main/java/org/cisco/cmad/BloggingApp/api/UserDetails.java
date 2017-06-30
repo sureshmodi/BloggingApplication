@@ -157,11 +157,12 @@ public class UserDetails {
 		this.links = links;
 	}
 
-	public void addLinks(URI uri, String ref) {
+	public void addLinks(URI uri, String ref, String blogtitle) {
 
 			Link link = new Link();
 			link.setUri(uri);
 			link.setReference(ref);
+			link.setBlogtitle(blogtitle);
 			links.add(link);
 			
 	}

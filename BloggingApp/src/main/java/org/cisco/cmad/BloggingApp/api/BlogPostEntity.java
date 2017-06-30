@@ -55,8 +55,7 @@ public class BlogPostEntity {
 	@Column(name="commentid")
 	@XmlTransient
 	private List<Comments> commentslist = new ArrayList<>();
-	// private Map<String, Comments> comments = new HashMap<String, Comments>();
-	
+		
 	@Transient
 	private long comments_count=0;
 		

@@ -15,7 +15,8 @@
 <hr/>
 <!-- Blog header -->
 <div id="blogheader">
-  <div id="headerhome" style="display:none;">
+  <!-- <div id="headerhome" style="display:none;"> -->
+  <div id="headerhome" >	
     <input id="home" type="button" value="Home">
   </div> 
   <div id="headerdisplayposts">
@@ -24,8 +25,8 @@
   <div id="headerlogin">
     <input id="headerloginform" type="button" value="Log In">
   </div>
-  <div id="headercreatepost" style="display:none;">
-  <!-- <div id="headercreatepost" "> -->   
+  <!-- <div id="headercreatepost" style="display:none;"> -->
+  <div id="headercreatepost" >
     <!-- <a href="#" id="createpost"><strong>Create Post</strong></a> -->
     <input id="createpost" type="button" value="Create Post">
   </div>
@@ -149,17 +150,80 @@
 
 <div id="bloglist" style="display:none;">
 <p> Blog post details </p>
-<table id="bloglisttable" style="width:100%">
+<table id="bloglisttable" style="width:100%" align="left">
   <thead>
   <tr>
-    <th>Title</th>
-    <th>Details</th>
+    <th align="left">BlogPosts</th>
+    <!-- <th>Details</th> -->
   </tr>
   </thead>
   <tbody></tbody>
 </table>
 </div>
 
+<div id="usertable" style="display:none;">
+<!-- <p> User Details </p> -->
+<table id="userprofiletable" style="width:100%" align="left">
+  <thead>
+  <tr>
+    <th>User Details</th>
+    <!-- <th>Details</th> -->
+  </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+</div>
+
+<div class="blogsearch">
+	<form>
+  		<input type="text" id="searchtext" name="search" placeholder="Blog Search..">
+  		<input id="searchbutton" type="button" value="search">
+	</form>
+</div>
+
+<div id="UserDetails" style="display:none;">
+	
+  	<input id="userdetailsbutton" type="button" value="User Details">
+	
+</div>
+
+<!-- Update profile form -->
+ <div data-role="page" id="userdetails" style="display:none;">
+        <div data-role="header">
+            <h1>User Profile</h1>
+        </div>
+        <div data-role="content">
+            <div data-role="content">
+                <form id="userdetailsform">
+                    <div data-role="fieldcontain">
+                       <label for="userprofilefullname"><strong>Full Name    : </strong></label>
+                       <input id="userprofilefullname" placeholder="Full Name" type="text" size="25" value=""> <br />
+                       <label for="userprofilecontact"><strong>Contact Number: </strong></label>
+                       <input id="userprofilecontact" placeholder="Contact Number" type="text" size="25" value=""> <br />
+                       <label for="userprofileregisteremail"><strong>Email       : </strong></label>
+                       <input id="userprofileregisteremail" placeholder="Email" type="text" size="25" value=""> <br />
+                       <label for="userprofileaddress"><strong>Address       : </strong></label>
+                       <input id="userprofileaddress" placeholder="Address" type="text" size="25" value=""> <br />
+                       <input id="userprofilesubmit" type="button" value="Submit">                                                                
+                    </div>
+                </form>
+            </div>
+        </div>
+ </div>
+
+<!-- <div class="center">
+  <ul class="pagination">
+    <li><a id="prev">«</a></li>
+    <li><a id="test1" href="#" class="active">1</a></li>
+    <li><a id="test2" href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">6</a></li>
+    <li><a href="#">7</a></li>
+    <li><a href="#" id="next">»</a></li>
+  </ul>
+</div> -->
 
 
 </div>

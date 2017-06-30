@@ -333,6 +333,44 @@ public class JPABlogAppDAO implements BlogPostDAOInf,UserDAOInf,CommentsDAOInf {
 		}
 		
 		return userid;
+	}
+
+	@Override
+	public List<Object[]> searchBlogPosts(String expression) {
+		
+		EntityManager em = null;
+		EntityTransaction tx = null;
+		List<Object[]> result = null;
+		
+		
+		try {
+			em = factory.createEntityManager();
+		    tx = em.getTransaction();
+		    tx.begin();
+		
+//		    CriteriaQuery<BlogPostEntity> criteria = em.getCriteriaBuilder().createQuery(BlogPostEntity.class);
+//		
+//		    criteria.select(criteria.from(BlogPostEntity.class));
+//		    
+//	   	    ListOfBlogPosts = em.createQuery(criteria).getResultList();
+		    
+		    Query query = em.createQuery("SELECT b.blogpostid, b.title FROM BlogPostEntity b "
+		    							 + "WHERE b.blogcontent LIKE :searchtext OR b.title LIKE :searchtext")
+		    							.setParameter("searchtext", "%"+expression+"%");
+		    
+		    result = query.getResultList();
+		    
+		} catch (Exception e) {
+			
+			System.out.println("Suresh: Caught Excpetion inside searchBlogPosts method");
+			e.printStackTrace();
+			e.getMessage();
+		   		   
+		} finally {
+			em.close();
+		}
+		
+		 return result;
 	}	
 
 }

@@ -29,6 +29,7 @@ import org.cisco.cmad.BloggingApp.api.BlogPost;
 import org.cisco.cmad.BloggingApp.api.BlogPostEntity;
 import org.cisco.cmad.BloggingApp.api.BlogPostList;
 import org.cisco.cmad.BloggingApp.api.BlogPostNotCreatedExcepion;
+import org.cisco.cmad.BloggingApp.api.BlogPostNotFoundException;
 import org.cisco.cmad.BloggingApp.api.BlogUser;
 import org.cisco.cmad.BloggingApp.api.Comments;
 import org.cisco.cmad.BloggingApp.api.CommentsList;
@@ -73,26 +74,32 @@ public class BlogRestController {
 			   @Context UriInfo uriinfo,@Context HttpHeaders headers) throws BlogPostNotCreatedExcepion
 	{
 
-		MultivaluedMap<String,String> headervalues = headers.getRequestHeaders();
-		String jwttoken = null;
-		
-		try {
-		jwttoken = headervalues.get(AUTHORIZATION).get(0);
-		} catch (NullPointerException e) {
-		throw new InvalidUserCredentialsException("No Authorization header present in HTTP Request");
-		}	  
-		
-		jwtauth.parseJwtToken(userid, jwttoken);	
-		
-		BlogPostEntity blogpostdb = blogpost.createBlogpost(recvblogpost, userid);
-		String id = String.valueOf(blogpostdb.getBlogpostid());
-		//URI uri = uriinfo.getAbsolutePathBuilder().path(id).build();
-		URI uri = uriinfo.getBaseUriBuilder()
-			  .path(BlogRestController.class)
-			  .path("blogpost").path(id).build();
-		
-		blogpostdb.addLinks(uri, recvblogpost.getBlogpostid());
-		return Response.created(uri).entity(blogpostdb).build();
+		if(userid != null) {
+			MultivaluedMap<String,String> headervalues = headers.getRequestHeaders();
+			String jwttoken = null;
+			
+			try {
+			jwttoken = headervalues.get(AUTHORIZATION).get(0);
+			} catch (NullPointerException e) {
+			throw new InvalidUserCredentialsException("No Authorization header present in HTTP Request");
+			}	  
+			
+			jwtauth.parseJwtToken(userid, jwttoken);	
+			
+			BlogPostEntity blogpostdb = blogpost.createBlogpost(recvblogpost, userid);
+			String id = String.valueOf(blogpostdb.getBlogpostid());
+			//URI uri = uriinfo.getAbsolutePathBuilder().path(id).build();
+			URI uri = uriinfo.getBaseUriBuilder()
+				  .path(BlogRestController.class)
+				  .path("blogpost").path(id).build();
+			
+			blogpostdb.addLinks(uri, recvblogpost.getBlogpostid());
+			return Response.created(uri).entity(blogpostdb).build();
+		} else {
+			
+			throw new InvalidUserCredentialsException("Missing mandatory user details");
+			
+		}
 	
 	
 	}
@@ -145,11 +152,14 @@ public class BlogRestController {
 			Set<String> keys = userdb.getBloglist().keySet();
 													
 			for (String key: keys) {
+						String blogid = userdb.getBloglist().get(key).getBlogpostid();
+						String blogtitle = userdb.getBloglist().get(key).getTitle();
 						URI uri = uriinfo.getBaseUriBuilder().path(BlogRestController.class)
 									.path("blogpost")
 									.path(userdb.getBloglist().get(key).getBlogpostid())
 									.build();
-						userdb.addLinks(uri,userdb.getBloglist().get(key).getBlogpostid());
+						/*userdb.addLinks(uri,userdb.getBloglist().get(key).getBlogpostid());*/
+						userdb.addLinks(uri,blogid,blogtitle);
 			}
 			
 			String token = jwtauth.generateJwtToken(user.getUserid(),uriinfo.getAbsolutePath().toString(),user.getUserid(),1000000);
@@ -312,11 +322,14 @@ public class BlogRestController {
 			Set<String> keys = userdb.getBloglist().keySet();
 													
 			for (String key: keys) {
+						String blogid = userdb.getBloglist().get(key).getBlogpostid();
+						String blogtitle = userdb.getBloglist().get(key).getTitle();
 						URI uri = uriinfo.getBaseUriBuilder().path(BlogRestController.class)
 									.path("blogpost")
 									.path(userdb.getBloglist().get(key).getBlogpostid())
 									.build();
-						userdb.addLinks(uri,userdb.getBloglist().get(key).getBlogpostid());
+						/*userdb.addLinks(uri,userdb.getBloglist().get(key).getBlogpostid());*/
+						userdb.addLinks(uri,blogid,blogtitle);
 			}
 						
 			return Response.status(Status.OK).entity(userdb).build();
@@ -373,6 +386,43 @@ public class BlogRestController {
 		}
 							   
 	
+	}
+	
+	@GET
+	@Produces({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
+	@Path("/blog/search/{search}")
+	public Response searchBlogposts(@Context UriInfo uriinfo,@PathParam("search") String searchtext) {
+		
+		System.out.println("Suresh: Received Blog Search text: "+searchtext);
+		List<Object[]> dbbloglist = blogpost.searchBlogPosts(searchtext);
+			
+		if(!dbbloglist.isEmpty() && dbbloglist != null) {
+						
+			BlogPostList bloglist = new BlogPostList();
+									
+			for (int i=0;i<dbbloglist.size();i++) {
+				
+				System.out.println("Suresh: Inside searchBlogPost: blogid: "+dbbloglist.get(i)[0]);
+				System.out.println("Suresh: Inside searchBlogPost: blogtitle: "+dbbloglist.get(i)[1]);
+				
+				URI uri = uriinfo.getBaseUriBuilder().path(BlogRestController.class)
+							.path("blogpost")
+							.path((String) dbbloglist.get(i)[0])
+							.build();
+				
+				bloglist.addLinks((String) dbbloglist.get(i)[1],uri);
+				
+			
+			}	
+		
+			return Response.status(Status.OK).entity(bloglist).build();
+			
+		} else {
+			throw new BlogPostNotFoundException("No results found. Try entering different keywords.");
+			//return Response.status(Status.NOT_FOUND).build();
+		}
+		
+		
 	}
 	
 	
