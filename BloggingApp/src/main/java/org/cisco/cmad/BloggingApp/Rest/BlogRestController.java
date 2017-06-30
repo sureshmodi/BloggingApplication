@@ -88,7 +88,7 @@ public class BlogRestController {
 			
 			BlogPostEntity blogpostdb = blogpost.createBlogpost(recvblogpost, userid);
 			String id = String.valueOf(blogpostdb.getBlogpostid());
-			//URI uri = uriinfo.getAbsolutePathBuilder().path(id).build();
+			
 			URI uri = uriinfo.getBaseUriBuilder()
 				  .path(BlogRestController.class)
 				  .path("blogpost").path(id).build();
